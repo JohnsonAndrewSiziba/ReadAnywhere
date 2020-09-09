@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Graph Theory - Types of Graphs - Tutorialspoint</title>
+<meta charset="utf-8">
+<meta name="description" content="Graph Theory - Types of Graphs - There are various types of graphs depending upon the number of vertices, number of edges, interconnectivity, and their overall structure. We will discuss only a"/>
+<meta name="keywords" content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Tutorials, Articles, Programming, training, learning, quiz, preferences, examples, code"/>
+<link rel="canonical" href="graph_theory_types_of_graphs.htm" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" href="../themes/css/style-min-v1.css%3Fv=3.1.2.335.css">
+<script src="../themes/js/script-min-v1.js%3Fv=3.0.2040221"></script>
+<script>function printPage() { window.print(); }</script>
+<script id="vi1" type="text/javascript" src="https://services.bilsyndication.com/adv1/?q=0a8a90220201327770f6c986bea026a3" defer="" async=""></script>
+<script id="vi2">
+var vitag = vitag || {};
+vitag.outStreamConfig = { enablePC:false, enableMobile:false};
+vitag.smartBannerConfig = { enablePC: false, enableMobile: true, disableHorizontalPosition: "right left middle", disableVerticalPosition: "top middle" };
+</script>
+<script id="adp" data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/18107/adRecover.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<style>
+.butnn-save a{color:#fff;} .notes_msg{color:green; margin-left:20px; margin-top:15px;}
+.right-menu .mui-btn {
+    background-color:#c0b503;
+}
+a.demo {
+    background:#c0b503;
+}
+li.heading {
+    background:#c0b503;
+}
+.course-box{background:#c0b503}
+.home-intro-sub p{color:#c0b503}
+</style>
+</head>
+<body>
+<header id="header">
+<!-- pop-up -->
+<div class="pop-modal overlay-pop popdiv">
+<div class="modal-window small">
+<span class="close" title="close">×</span>
+<div class="pop-content">
+</div>
+<span class="msg" ></span>
+</div>
+</div>
+<div class="wrap_loader">
+<div class="imgLoader"><img src="../videotutorials/images/loader.gif" alt="Tutorialspoint" width="70" height="70"></div>
+</div>
+<input type="hidden" id="vu" name="vu" value="" />
+<!-- pop-up -->
+
+<!-- Top sub-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid top-menu">
+<div class="mui-container">
+<div class="top-menu-item home">
+<a href="https://www.tutorialspoint.com/index.htm" target="_blank" title="TutorialsPoint - Home"><i class="fal fa-home"></i> <span>Home</span></a>
+</div>
+<div class="top-menu-item qa">
+<a href="https://www.tutorialspoint.com/about/about_careers.htm" target="_blank" title="Job @ Tutorials Point"><i class="fa fa-suitcase"></i> <span>Jobs</span></a>
+</div>
+<div class="top-menu-item tools">
+<a href="https://www.tutorialspoint.com/online_dev_tools.htm" target="_blank" title="Tools - Online Development and Testing Tools"><i class="fal fa-cogs"></i> <span>Tools</span></a>
+</div>
+<div class="top-menu-item coding-ground">
+<a href="https://www.tutorialspoint.com/codingground.htm" target="_blank" title="Coding Ground - Free Online IDE and Terminal"><i class="fal fa-code"></i> <span>Coding Ground </span></a> 
+</div>
+<div class="top-menu-item current-affairs">
+<a href="https://www.tutorialspoint.com/current_affairs.htm" target="_blank" title="Daily Current Affairs"><i class="fal fa-layer-plus"></i> <span>Current Affairs</span></a>
+</div>
+<div class="top-menu-item upsc-notes">
+<a href="https://www.tutorialspoint.com/upsc_ias_exams.htm" target="_blank" title="UPSC IAS Exams Notes - TutorialsPoint"><i class="fal fa-user-tie"></i> <span>UPSC Notes</span></a>
+</div>      
+<div class="top-menu-item articles">
+<a href="https://www.tutorialspoint.com/tutor_connect/index.php" target="_blank" title="Top Online Tutors - Tutor Connect"><i class="fal fa-user"></i> <span>Online Tutors</span></a>
+</div>
+<div class="top-menu-item whiteboard">
+<a href="https://www.tutorialspoint.com/whiteboard.htm" target="_blank" title="Free Online Whiteboard"><i class="fal fa-chalkboard"></i> <span>Whiteboard</span></a>
+</div>
+<div class="top-menu-item net-meeting">
+<a href="https://www.tutorialspoint.com/netmeeting.php" target="_blank" title="A free tool for online video conferencing"><i class="fal fa-chalkboard-teacher"></i> <span>Net Meeting</span></a> 
+</div>
+<div class="top-menu-item articles">
+<a href="https://www.tutorix.com" target="_blank" title="Tutorx - The Best Learning App" rel="nofollow"><i class="fal fa-video"></i> <span>Tutorix</span></a> 
+</div>        
+<div class="top-menu-item qa login">
+<a href="https://www.tutorialspoint.com/videotutorials/login.php" target="_blank" title="Tutorials Point - Login"><i class="fa fa-sign-in-alt"></i> <span>Login</span></a> 
+</div>        
+<div class="top-menu-item qa login">
+<a href="https://www.tutorialspoint.com/videotutorials/subscription.php" target="_blank" title="Paid Package"><i class="fa fa-book-reader"></i> <span>Packages</span></a> 
+</div>        
+<div class="social-menu-item">
+<a href="https://www.facebook.com/tutorialspointindia" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Facebook"><i class="fab fa-facebook-f"></i></a> 
+<a href="https://www.twitter.com/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint YouTube"><i class="fab fa-youtube"></i></a>
+</div>        
+</div>
+</div>
+<!-- Top sub-menu Ends Here -->
+<!-- Top main-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+<div class="mui-container">
+<div class="left-menu">
+<a href="https://www.tutorialspoint.com/index.htm" title="Tutorialspoint">
+<img class="tp-logo" alt="tutorialspoint" src="images/logo.png">
+</a>
+<div class="mui-dropdown">
+<a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown"><i class="fa fa-th-large"></i> 
+<span>Categories <span class="mui-caret"></span></span></a>            
+<ul class="mui-dropdown__menu cat-menu">
+<li>
+<ul>
+<li><a href="https://www.tutorialspoint.com/academic_tutorials.htm"><i class="fa fa-caret-right"></i> Academic Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/big_data_tutorials.htm"><i class="fa fa-caret-right"></i> Big Data &amp; Analytics </a></li>
+<li><a href="https://www.tutorialspoint.com/computer_programming_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Programming </a></li>
+<li><a href="https://www.tutorialspoint.com/computer_science_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Science </a></li>
+<li><a href="https://www.tutorialspoint.com/database_tutorials.htm"><i class="fa fa-caret-right"></i> Databases </a></li>
+<li><a href="https://www.tutorialspoint.com/devops_tutorials.htm"><i class="fa fa-caret-right"></i> DevOps </a></li>
+<li><a href="https://www.tutorialspoint.com/digital_marketing_tutorials.htm"><i class="fa fa-caret-right"></i> Digital Marketing </a></li>
+<li><a href="https://www.tutorialspoint.com/engineering_tutorials.htm"><i class="fa fa-caret-right"></i> Engineering Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> Exams Syllabus </a></li>
+<li><a href="https://www.tutorialspoint.com/famous_monuments.htm"><i class="fa fa-caret-right"></i> Famous Monuments </a></li>
+<li><a href="https://www.tutorialspoint.com/gate_exams_tutorials.htm"><i class="fa fa-caret-right"></i> GATE Exams Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/latest_technologies.htm"><i class="fa fa-caret-right"></i> Latest Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/machine_learning_tutorials.htm"><i class="fa fa-caret-right"></i> Machine Learning </a></li>
+<li><a href="https://www.tutorialspoint.com/mainframe_tutorials.htm"><i class="fa fa-caret-right"></i> Mainframe Development </a></li>
+<li><a href="https://www.tutorialspoint.com/management_tutorials.htm"><i class="fa fa-caret-right"></i> Management Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/maths_tutorials.htm"><i class="fa fa-caret-right"></i> Mathematics Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/microsoft_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Microsoft Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/misc_tutorials.htm"><i class="fa fa-caret-right"></i> Misc tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/mobile_development_tutorials.htm"><i class="fa fa-caret-right"></i> Mobile Development </a></li>
+<li><a href="https://www.tutorialspoint.com/java_technology_tutorials.htm"><i class="fa fa-caret-right"></i> Java Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/python_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Python Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/sap_tutorials.htm"><i class="fa fa-caret-right"></i> SAP Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/scripting_lnaguage_tutorials.htm"><i class="fa fa-caret-right"></i>Programming Scripts </a></li>
+<li><a href="https://www.tutorialspoint.com/selected_reading.htm"><i class="fa fa-caret-right"></i> Selected Reading </a></li>
+<li><a href="https://www.tutorialspoint.com/software_quality_tutorials.htm"><i class="fa fa-caret-right"></i> Software Quality </a></li>
+<li><a href="https://www.tutorialspoint.com/soft_skill_tutorials.htm"><i class="fa fa-caret-right"></i> Soft Skills </a></li>
+<li><a href="https://www.tutorialspoint.com/telecom_tutorials.htm"><i class="fa fa-caret-right"></i> Telecom Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> UPSC IAS Exams </a></li>
+<li><a href="https://www.tutorialspoint.com/web_development_tutorials.htm"><i class="fa fa-caret-right"></i> Web Development </a></li>
+<li><a href="https://www.tutorialspoint.com/sports_tutorials.htm"><i class="fa fa-caret-right"></i> Sports Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/xml_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> XML Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/multi_language_tutorials.htm"><i class="fa fa-caret-right"></i> Multi-Language</a></li>
+<li><a href="https://www.tutorialspoint.com/questions_and_answers.htm"><i class="fa fa-caret-right"></i> Interview Questions</a></li>
+</ul>
+</li>
+</ul>
+<div class="clear"></div>
+</div> 
+</div>
+<div class="right-menu">
+<div class="toc-toggle">
+<a href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+</div>
+<div class="mobile-search-btn">
+<a href="https://www.tutorialspoint.com/index.htm"><i class="fal fa-search"></i></a>
+</div>
+<div class="search-box">
+<script async src="https://cse.google.com/cse.js?cx=000263362972888060243:yfed6eu421q"></script>
+<div class='gcse-search'></div>
+</div>
+<div class="menu-btn library-btn">
+<a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a>
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a> 
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/questions/index.php"><i class="fa fa-location-arrow"></i> <span>Q/A</span></a>
+</div>
+<div class="menu-btn ebooks-btn">
+<a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a>
+</div>
+<div class="mui-dropdown">
+<button class="mui-btn mui-btn--primary mobile-menu" data-mui-toggle="dropdown">
+<span class="mui-caret"></span>
+</button>
+<ul class="mui-dropdown__menu">
+<li class="login"><a href="https://www.tutorialspoint.com/videotutorials/login.php"><i class="fal fa-sign-in-alt"></i> <span>Login</span></a></li>
+<li><a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a></li>
+<li><a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Top main-menu Ends Here -->
+</header>
+<div class="mui-container-fluid content">
+<div class="mui-container">
+<!-- Tutorial ToC Starts Here -->
+<div class="mui-col-md-3 tutorial-toc">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+linebreaks: { automatic: true, width: "container" }          
+}              
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+<div class="mini-logo">
+<img src="images/graph_theory_mini_logo.jpg" alt="Graph Theory Tutorial" />
+</div>
+<ul class="toc chapters" >
+<li class="heading">Graph Theory Tutorial</li>
+<li><a href="index.htm">Graph Theory - Home</a></li>
+<li><a href="graph_theory_introduction.htm">Graph Theory - Introduction</a></li>
+<li><a href="graph_theory_fundamentals.htm">Graph Theory - Fundamentals</a></li>
+<li><a href="graph_theory_basic_properties.htm">Graph Theory - Basic Properties</a></li>
+<li><a href="graph_theory_types_of_graphs.htm">Graph Theory - Types of Graphs</a></li>
+<li><a href="graph_theory_trees.htm">Graph Theory - Trees</a></li>
+<li><a href="graph_theory_connectivity.htm">Graph Theory - Connectivity</a></li>
+<li><a href="graph_theory_coverings.htm">Graph Theory - Coverings</a></li>
+<li><a href="graph_theory_matchings.htm">Graph Theory - Matchings</a></li>
+<li><a href="graph_theory_independent_sets.htm">Graph Theory - Independent Sets</a></li>
+<li><a href="graph_theory_coloring.htm">Graph Theory - Coloring</a></li>
+<li><a href="graph_theory_isomorphism.htm">Graph Theory - Isomorphism</a></li>
+<li><a href="graph_theory_traversability.htm">Graph Theory - Traversability</a></li>
+<li><a href="graph_theory_examples.htm">Graph Theory - Examples</a></li>
+<li class="heading">Graph Theory Useful Resources</li>
+<li><a href="graph_theory_quick_guide.htm">Graph Theory - Quick Guide</a></li>
+<li><a href="graph_theory_useful_resources.htm">Graph Theory - Useful Resources</a></li>
+<li><a href="graph_theory_discussion.htm">Graph Theory - Discussion</a></li>
+</ul>
+<ul class="toc reading">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="https://www.tutorialspoint.com/upsc_ias_exams.htm">UPSC IAS Exams Notes</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+<div id="stickyparent">
+<div style="height:250px;width:300px;" id="sticky-ad">
+<div class="adsbyvli" data-ad-slot="vi_9012177"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9012177")})</script>
+</div>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="mui-col-md-6 tutorial-content">
+<h1>Graph Theory - Types of Graphs</h1>
+<hr/>
+<div id="google-top-ads">
+<div class="top-ad-heading">Advertisements</div>
+<div style="text-align:center" class="google-top-ads">
+<div id="vi_top_ads" style="text-align:center !important;"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_top_ads');
+     var ad_id_728 = "vi_9012178";
+     var ad_id_650 = "vi_9014435";
+     var ad_id_300 = "vi_9017967";
+     var width = window.innerWidth;
+     var ad_id = ad_id_728;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+</div>
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="graph_theory_basic_properties.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="graph_theory_trees.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="clear"></div>
+<p>There are various types of graphs depending upon the number of vertices, number of edges, interconnectivity, and their overall structure. We will discuss only a certain few important types of graphs in this chapter.</p>
+<h2>Null Graph</h2>
+<p><b>A graph having no edges</b> is called a Null Graph.</p>
+<h3>Example</h3>
+<img src="images/null_graph.jpg" alt="Null Graph"/>
+<p>In the above graph, there are three vertices named ‘a’, ‘b’, and ‘c’, but there are no edges among them. Hence it is a Null Graph.</p>
+<h2>Trivial Graph</h2>
+<p>A <b>graph with only one vertex</b> is called a Trivial Graph.</p>
+<h3>Example</h3>
+<img src="images/vertex.jpg" alt="Vertex"/>
+<p>In the above shown graph, there is only one vertex ‘a’ with no other edges. Hence it is a Trivial graph.</p>
+<h2>Non-Directed Graph</h2>
+<p>A non-directed graph contains edges but the edges are not directed ones.</p>
+<h3>Example</h3>
+<img src="images/non_directed_graph.jpg" alt="Non-Directed Graph"/>
+<p>In this graph, ‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’ are the vertices, and ‘ab’, ‘bc’, ‘cd’, ‘da’, ‘ag’, ‘gf’, ‘ef’ are the edges of the graph. Since it is a non-directed graph, the edges ‘ab’ and ‘ba’ are same. Similarly other edges also considered in the same way.</p>
+<h2>Directed Graph</h2>
+<p>In a directed graph, each edge has a direction.</p>
+<h3>Example</h3>
+<img src="images/directed_graph.jpg" alt="Directed Graph"/>
+<p>In the above graph, we have seven vertices ‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, and ‘g’, and eight edges ‘ab’, ‘cb’, ‘dc’, ‘ad’, ‘ec’, ‘fe’, ‘gf’, and ‘ga’. As it is a directed graph, each edge bears an arrow mark that shows its direction. Note that in a directed graph, ‘ab’ is different from ‘ba’.</p>
+<h2>Simple Graph</h2>
+<p>A graph <b>with no loops</b> and no <b>parallel edges</b> is called a simple graph.</p>
+<ul class="list">
+<li><p>The maximum number of edges possible in a single graph with ‘n’ vertices is <sup>n</sup>C<sub>2</sub> where <sup>n</sup>C<sub>2</sub> = n(n – 1)/2.</p></li>
+<li><p>The number of simple graphs possible with ‘n’ vertices = 2<sub><sup>n</sup>c<sub>2</sub></sub> = 2<sup>n(n-1)/2</sup>.</p></li>
+</ul>
+<h3>Example</h3>
+<p>In the following graph, there are 3 vertices with 3 edges which is maximum excluding the parallel edges and loops. This can be proved by using the above formulae.</p>
+<img src="images/simple_graph.jpg" alt="Simple Graph"/>
+<p>The maximum number of edges with n=3 vertices &minus;</p>
+<p><center><sup>n</sup>C<sub>2</sub> = n(n–1)/2</center></p>
+<p><center>= 3(3–1)/2</center></p>
+<p><center>= 6/2</center></p>
+<p><center>= 3 edges</center></p>
+<p>The maximum number of simple graphs with n=3 vertices &minus;</p>
+<p><center>2<sub><sup>n</sup>C<sub>2</sub></sub> = 2<sup>n(n-1)/2</sup></center></p>
+<p><center>= 2<sup>3(3-1)/2</sup></center></p>
+<p><center>= 2<sup>3</sup></center></p>
+<p><center>8</center></p>
+<p>These 8 graphs are as shown below &minus;</p>
+<img src="images/maximum_number_of_simple_graph.jpg" alt="maximum number of simple graphs"/>
+<h2>Connected Graph</h2>
+<p>A graph G is said to be connected <b>if there exists a path between every pair of vertices</b>. There should be at least one edge for every vertex in the graph. So that we can say that it is connected to some other vertex at the other side of the edge.</p>
+<h3>Example</h3>
+<p>In the following graph, each vertex has its own edge connected to other edge. Hence it is a connected graph.</p>
+<img src="images/connected_graph.jpg" alt="Connected Graph"/>
+<h2>Disconnected Graph</h2>
+<p>A graph G is disconnected, if it does not contain at least two connected vertices.</p>
+<h4>Example 1</h4>
+<p>The following graph is an example of a Disconnected Graph, where there are two components, one with ‘a’, ‘b’, ‘c’, ‘d’ vertices and another with ‘e’, ’f’, ‘g’, ‘h’ vertices.</p>
+<img src="images/independent_disconnected_graph.jpg" alt="Independent Disconnected Graph"/>
+<p>The two components are independent and not connected to each other. Hence it is called disconnected graph.</p>
+<h3>Example 2</h3>
+<img src="images/two_independent_components.jpg" alt="Two Independent Components"/>
+<p>In this example, there are two independent components, a-b-f-e and c-d, which are not connected to each other. Hence this is a disconnected graph.</p>
+<h2>Regular Graph</h2>
+<p>A graph G is said to be regular, <b>if all its vertices have the same degree</b>. In a graph, if the degree of each vertex is ‘k’, then the graph is called a ‘k-regular graph’.</p>
+<h3>Example</h3>
+<p>In the following graphs, all the vertices have the same degree. So these graphs are called regular graphs.
+</p>
+<img src="images/regular_graph.jpg" alt="Regular Graph"/>
+<p>In both the graphs, all the vertices have degree 2. They are called 2-Regular Graphs.</p>
+<h2>Complete Graph</h2>
+<p>A simple graph with ‘n’ mutual vertices is called a complete graph and it is <b>denoted by ‘K<sub>n</sub>’</b>. In the graph, <b>a vertex should have edges with all other vertices</b>, then it called a complete graph.</p>
+<p>In other words, if a vertex is connected to all other vertices in a graph, then it is called a complete graph.</p>
+<h3>Example</h3>
+<p>In the following graphs, each vertex in the graph is connected with all the remaining vertices in the graph except by itself.</p>
+<img src="images/complete_graphs.jpg" alt="Complete Graphs"/>
+<p>In graph I,</p>
+<table class="table table-bordered">
+<tr>
+<th></th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+</tr>
+<tr>
+<th>a</th>
+<td>Not Connected</td>
+<td>Connected</td>
+<td>Connected</td>
+</tr>
+<tr>
+<th>b</th>
+<td>Connected</td>
+<td>Not Connected</td>
+<td>Connected</td>
+</tr>
+<tr>
+<th>c</th>
+<td>Connected</td>
+<td>Connected</td>
+<td>Not Connected</td>
+</tr>
+</table>
+<p>In graph II,</p>
+<table class="table table-bordered">
+<tr>
+<th></th>
+<th>p</th>
+<th>q</th>
+<th>r</th>
+<th>s</th>
+</tr>
+<tr>
+<th>p</th>
+<td>Not Connected</td>
+<td>Connected</td>
+<td>Connected</td>
+<td>Connected</td>
+</tr>
+<tr>
+<th>q</th>
+<td>Connected</td>
+<td>Not Connected</td>
+<td>Connected</td>
+<td>Connected</td>
+</tr>
+<tr>
+<th>r</th>
+<td>Connected</td>
+<td>Connected</td>
+<td>Not Connected</td>
+<td>Connected</td>
+</tr>
+<tr>
+<th>s</th>
+<td>Connected</td>
+<td>Connected</td>
+<td>Connected</td>
+<td>Not Connected</td>
+</tr>
+</table>
+<h2>Cycle Graph</h2>
+<p>A simple graph with ‘n’ vertices (n >= 3) and ‘n’ edges is called a cycle graph if all its edges form a cycle of length ‘n’.</p>
+<p>If the degree of each vertex in the graph is two, then it is called a Cycle Graph.</p>
+<p><b>Notation</b> &minus; C<sub>n</sub></p>
+<h3>Example</h3>
+<p>Take a look at the following graphs &minus;</p>
+<ul class="list">
+<li><p>Graph I has 3 vertices with 3 edges which is forming a cycle ‘ab-bc-ca’.</p></li>
+<li><p>Graph II has 4 vertices with 4 edges which is forming a cycle ‘pq-qs-sr-rp’.</p></li>
+<li><p>Graph III has 5 vertices with 5 edges which is forming a cycle ‘ik-km-ml-lj-ji’.</p></li>
+</ul>
+<img src="images/cycle_graph.jpg" alt="Cycle Graph"/>
+<p>Hence all the given graphs are cycle graphs.</p>
+<h2>Wheel Graph</h2>
+<p>A wheel graph is obtained from a cycle graph C<sub>n-1</sub> by adding a new vertex. That new vertex is called a <b>Hub</b> which is connected to all the vertices of C<sub>n</sub>.</p>
+<p>Notation &minus; W<sub>n</sub></p>
+<p>No. of edges in W<sub>n</sub> = No. of edges from hub to all other vertices + </p>
+<p style="margin-left:23%;">No. of edges from all other nodes in cycle graph without a hub.</p>
+<p style="margin-left:23%;">= (n–1) + (n–1)</p>
+<p style="margin-left:23%;">= 2(n–1)</p>
+<h3>Example</h3>
+<p>Take a look at the following graphs. They are all wheel graphs.</p>
+<img src="images/wheel_graph.jpg" alt="Wheel Graph"/>
+<p>In graph I, it is obtained from C<sub>3</sub> by adding an vertex at the middle named as ‘d’. It is denoted as W<sub>4</sub>.</p>
+<p>Number of edges in W4 = 2(n-1) = 2(3) = 6</p>
+<p>In graph II, it is obtained from C4 by adding a vertex at the middle named as ‘t’. It is denoted as W<sub>5</sub>.</p>
+<p>Number of edges in W5 = 2(n-1) = 2(4) = 8</p>
+<p>In graph III, it is obtained from C<sub>6</sub> by adding a vertex at the middle named as ‘o’. It is denoted as W<sub>7</sub>.</p>
+<p>Number of edges in W4 = 2(n-1) = 2(6) = 12</p>
+<h2>Cyclic Graph</h2>
+<p>A graph <b>with at least one</b> cycle is called a cyclic graph.</p>
+<h3>Example</h3>
+<img src="images/cyclic_graph.jpg" alt="Cyclic Graph"/>
+<p>In the above example graph, we have two cycles a-b-c-d-a and c-f-g-e-c. Hence it is called a cyclic graph.</p>
+<h2>Acyclic Graph</h2>
+<p>A graph <b>with no cycles</b> is called an acyclic graph.</p>
+<h3>Example</h3>
+<img src="images/acyclic_graph.jpg" alt="Acyclic Graph"/>
+<p>In the above example graph, we do not have any cycles. Hence it is a non-cyclic graph.</p>
+<h2>Bipartite Graph</h2>
+<p>A simple graph G = (V, E) with vertex partition V = {V<sub>1</sub>, V<sub>2</sub>} is called a bipartite graph <b>if every edge of E joins a vertex in V1 to a vertex in V<sub>2</sub></b>.</p>
+<p>In general, a Bipertite graph has two sets of vertices, let us say, V1 and V2, and if an edge is drawn, it should connect any vertex in set V<sub>1</sub> to any vertex in set V<sub>2</sub>.</p>
+<h3>Example</h3>
+<img src="images/bipartite_graph.jpg" alt="Bipartite Graph"/>
+<p>In this graph, you can observe two sets of vertices − V<sub>1</sub> and V<sub>2</sub>. Here, two edges named ‘ae’ and ‘bd’ are connecting the vertices of two sets V<sub>1</sub> and V<sub>2</sub>.</p>
+<h2>Complete Bipartite Graph</h2>
+<p>A bipartite graph ‘G’, G = (V, E) with partition V = {V<sub>1</sub>, V<sub>2</sub>} is said to be a complete bipartite graph if every vertex in V<sub>1</sub> is connected to every vertex of V<sub>2</sub>.</p>
+<p>In general, a complete bipartite graph connects each vertex from set V<sub>1</sub> to each vertex from set V<sub>2</sub>.</p>
+<h3>Example</h3>
+<p>The following graph is a complete bipartite graph because it has edges connecting each vertex from set V<sub>1</sub> to each vertex from set V<sub>2</sub>.</p>
+<img src="images/complete_bipartite_graph.jpg" alt="Complete Bipartite Graph"/>
+<p>If |V<sub>1</sub>| = m and |V<sub>2</sub>| = n, then the complete bipartite graph is denoted by K<sub>m, n</sub>.</p>
+<ul class="list">
+<li>K<sub>m,n</sub> has (m+n) vertices and (mn) edges.</li>
+<li>K<sub>m,n</sub> is a regular graph if m=n.</li>
+</ul>
+<p>In general, a <b>complete bipartite graph is not a complete graph</b>.</p>
+<p>K<sub>m,n</sub> is a complete graph if m=n=1.</p>
+<p>The maximum number of edges in a bipartite graph with n vertices is &minus;</p>
+<p>[n<sup>2</sup>/4]</p>
+<p>If n=10, k5, 5= [n2/4] = [10<sup>2</sup>/4] = 25.</p>
+<p>Similarly, K6, 4=24</p>
+<p>K7, 3=21</p>
+<p>K8, 2=16</p>
+<p>K9, 1=9</p>
+<p>If n=9, k5, 4 = [n2/4] = [92/4] = 20</p>
+<p>Similarly, K6, 3=18</p>
+<p>K7, 2=14</p>
+<p>K8, 1=8</p>
+<p>‘G’ is a bipartite graph if ‘G’ has no cycles of odd length. A special case of bipartite graph is a star graph.</p>
+<h2>Star Graph</h2>
+<p>A complete bipartite graph of the form K1, n-1 is a star graph with n-vertices. A star graph is a complete bipartite graph if a single vertex belongs to one set and all the remaining vertices belong to the other set.</p>
+<h3>Example</h3>
+<img src="images/star_graph.jpg" alt="Star Graph"/>
+<p>In the above graphs, out of ‘n’ vertices, all the ‘n–1’ vertices are connected to a single vertex. Hence it is in the form of K<sup>1</sup>, <sup>n-1</sup> which are star graphs.</p>
+<h3>Complement of a Graph</h3>
+<p>Let 'G−' be a simple graph with some vertices as that of ‘G’ and an edge {U, V} is present in 'G−', if the edge is not present in G. It means, two vertices are adjacent in 'G−' if the two vertices are not adjacent in G.</p>
+<p>If the edges that exist in graph I are absent in another graph II, and if both graph I and graph II are combined together to form a complete graph, then graph I and graph II are called complements of each other.</p>
+<h3>Example</h3>
+<p>In the following example, graph-I has two edges ‘cd’ and ‘bd’. Its complement graph-II has four edges.</p>
+<img src="images/complement_of_a_graph.jpg" alt="Complement of a Graph"/>
+<p>Note that the edges in graph-I are not present in graph-II and vice versa. Hence, the combination of both the graphs gives a complete graph of ‘n’ vertices.</p>
+<p><b>Note</b> &minus; A combination of two complementary graphs gives a complete graph.</p>
+<p>If ‘G’ is any simple graph, then</p>
+<p>|E(G)| + |E('G-')| = |E(Kn)|, where n = number of vertices in the graph.</p>
+<h3>Example</h3>
+<p>Let ‘G’ be a simple graph with nine vertices and twelve edges, find the number of edges in 'G-'.</p>
+<p>You have, |E(G)| + |E('G-')| = |E(Kn)|</p>
+<p>12 + |E('G-')| =</p>
+<p>9(9-1) / 2 = <sup>9</sup>C<sub>2</sub></p>
+<p>12 + |E('G-')| = 36</p>
+<p>|E('G-')| = 24</p>
+<p>‘G’ is a simple graph with 40 edges and its complement 'G−' has 38 edges. Find the number of vertices in the graph G or 'G−'.</p>
+<p>Let the number of vertices in the graph be ‘n’.</p>
+<p>We have, |E(G)| + |E('G-')| = |E(Kn)|</p>
+<p>40 + 38 = n(n-1)/2</p>
+<p>156 = n(n-1)</p>
+<p>13(12) = n(n-1)</p>
+<p>n = 13</p>
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+<a href="graph_theory_basic_properties.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+</div>
+<div class="nxt-btn">
+<a href="graph_theory_trees.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="space-bottom" style="margin-bottom:20px;"></div>
+<div class="google-bottom-ads" id="google-bottom-ads">
+<div>Advertisements</div>
+<div>
+<div id="vi_bottom_ads"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_bottom_ads');
+     var mobile_ad_id = "vi_9017967";
+     var desktop_ad_id = "vi_9013190";
+     var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+<div class="space-bottom"></div>
+</div>
+</div>
+<!-- Tutorial Content Ends Here -->
+<!-- Right Column Starts Here -->
+<div class="mui-col-md-2 google-right-ads" id="chapter-menu" style="display: none;">
+<input type="hidden" id="vu" name="vu" value=""/>
+<div class="space-top"></div>
+<div class="mui-panel">
+<ul class="paid-menu" id="div-right-menu">
+<li><a class="hide-on-mobile" href="javascript:printPage();" title="Print this page"><i class="fa fa-print"></i> Print</a></li>
+<li><a href="javascript:void(0)" class="add_notes" title="Add Custom Notes" onclick="add_notes();"><i class="fa fa-edit"></i>&nbsp;Add Notes</a></li>
+<li><a href="javascript:void(0)" class="clsPage text-bookmark" id="text-bookmark" title="Add Bookmark" onclick="text_bookmark()"><i class="fal fa-bookmark"></i>&nbsp;Bookmark this page </a></li>
+<li><a href="javascript:void(0);" id="report_error_popup" onclick="report_error_popup();" title="Report Error"><i class="fal fa-bell"></i>&nbsp;Report Error</a></li>
+<li><a href="javascript:void(0);" id="suggestion_popup" title="Give Suggestions" onclick="suggestion_popup();"><i class="fal fa-badge-check"></i>&nbsp;Suggestions</a></li>
+</ul>
+<div class="profile-my-notes" id="text_notes_div" style="display:none;">
+<textarea rows="10" class="text_notes" id="text_notes" name="text_notes" placeholder="Enter your custom notes..."></textarea>
+<br>
+<a href="javascript:void(0);" id="submit_text_notes" class="butn-save" onclick="submit_text_notes();"> Save</a>
+<a href="javascript:void(0);" class="pop-no butn-cancel" onclick="notesClose();"> Close</a>
+<p class="notes_msg"  ></p>
+</div>
+<div class="bottom-menu">
+<button class="tp-btn"><i class="fal fa-box-up"></i> <a href="https://www.tutorialspoint.com/videotutorials/dashboard.php">Dashboard</a></button>
+<button class="tp-btn"><i class="fal fa-sign-out-alt"></i> <a href="https://www.tutorialspoint.com/videotutorials/userlogout.php">Logout</a></button>
+</div>
+</div>
+</div>
+<div class="mui-col-md-2 google-right-ads" id="google-right-ads">
+<div class="space-top"></div>
+<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+<div class="adsbyvli" data-ad-slot="vi_9017966"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017966")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;">
+<div class="adsbyvli" data-ad-slot="vi_9017967"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017967")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+<div class="adsbyvli" data-ad-slot="vi_9013289"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9013289")})</script>
+</div>
+<div class="space-bottom" style="margin-bottom:15px;"></div>
+</div>
+<!-- Right Column Ends Here -->
+</div>
+</div>
+<div class="clear"></div>
+<footer id="footer">
+<div class="mui--text-center">
+<div class="mui--text-caption mui--text-light">
+<a href="https://www.tutorialspoint.com/index.htm" class="logo"><img class="img-responsive" src="../images/logo-black.png" alt="Tutorials Point" title="Tutorials Point"></a>
+</div>
+<ul class="mui-list--inline mui--text-body2 mui--text-light">
+<li><a href="https://www.tutorialspoint.com/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+<li><a href="https://www.tutorialspoint.com/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/teach-with-us.php"><i class="fa fa-user header-icons"></i> Teach with Us</a></li>
+<li><a href="https://www.tutorialspoint.com/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+</ul>
+<div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights Reserved.</div>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-232293-6');
+</script>
+<script src="../videotutorials/js/text_menu.js%3Fv=1"></script>
+<script>
+function readCookie(name) {
+     var nameEQ = name + "=";
+     var ca = document.cookie.split(';');
+     for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+     }
+     return null;
+}
+$(document).ready(function (){
+    var cval = readCookie('subscription_purchased');
+    if(cval == '1'){
+          // logged in and purchased subscription.
+          $('#google-right-ads').remove();
+          $('#vi1').remove();
+          $('#vi2').remove();
+          $('#adp').remove();
+          $('#stickyparent').remove();
+          $('#google-top-ads').remove();
+          $('#google-bottom-ads').remove();
+          $('.tutorial-content hr').remove();
+          $('.login').remove();
+          $('#chapter-menu').show();
+          $('.content h1').css("border-bottom", "none");
+          $('.google-right-ads').css("padding-right", "0px");
+          $('.tutorial-content').css("border-radius", "10px");
+          $('#chapter-menu .mui-panel').css("border-radius", "10px");
+     }
+});
+</script>
+</footer>
+</body>
+</html>

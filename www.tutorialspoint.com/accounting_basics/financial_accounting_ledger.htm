@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Financial Accounting - Ledger - Tutorialspoint</title>
+<meta charset="utf-8">
+<meta name="description" content="Financial Accounting - Ledger - Now let us try to understand how a journal works. With the help of journal entries, we book each and every financial transaction of the organization chronically"/>
+<meta name="keywords" content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Tutorials, Articles, Programming, training, learning, quiz, preferences, examples, code"/>
+<link rel="canonical" href="financial_accounting_ledger.htm" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" href="../themes/css/style-min-v1.css%3Fv=3.1.2.335.css">
+<script src="../themes/js/script-min-v1.js%3Fv=3.0.2040221"></script>
+<script>function printPage() { window.print(); }</script>
+<script id="vi1" type="text/javascript" src="https://services.bilsyndication.com/adv1/?q=0a8a90220201327770f6c986bea026a3" defer="" async=""></script>
+<script id="vi2">
+var vitag = vitag || {};
+vitag.outStreamConfig = { enablePC:false, enableMobile:false};
+vitag.smartBannerConfig = { enablePC: false, enableMobile: true, disableHorizontalPosition: "right left middle", disableVerticalPosition: "top middle" };
+</script>
+<script id="adp" data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/18107/adRecover.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<style>
+.butnn-save a{color:#fff;} .notes_msg{color:green; margin-left:20px; margin-top:15px;}
+.right-menu .mui-btn {
+    background-color:#42c2ca;
+}
+a.demo {
+    background:#42c2ca;
+}
+li.heading {
+    background:#42c2ca;
+}
+.course-box{background:#42c2ca}
+.home-intro-sub p{color:#42c2ca}
+</style>
+</head>
+<body>
+<header id="header">
+<!-- pop-up -->
+<div class="pop-modal overlay-pop popdiv">
+<div class="modal-window small">
+<span class="close" title="close">×</span>
+<div class="pop-content">
+</div>
+<span class="msg" ></span>
+</div>
+</div>
+<div class="wrap_loader">
+<div class="imgLoader"><img src="../videotutorials/images/loader.gif" alt="Tutorialspoint" width="70" height="70"></div>
+</div>
+<input type="hidden" id="vu" name="vu" value="" />
+<!-- pop-up -->
+
+<!-- Top sub-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid top-menu">
+<div class="mui-container">
+<div class="top-menu-item home">
+<a href="https://www.tutorialspoint.com/index.htm" target="_blank" title="TutorialsPoint - Home"><i class="fal fa-home"></i> <span>Home</span></a>
+</div>
+<div class="top-menu-item qa">
+<a href="https://www.tutorialspoint.com/about/about_careers.htm" target="_blank" title="Job @ Tutorials Point"><i class="fa fa-suitcase"></i> <span>Jobs</span></a>
+</div>
+<div class="top-menu-item tools">
+<a href="https://www.tutorialspoint.com/online_dev_tools.htm" target="_blank" title="Tools - Online Development and Testing Tools"><i class="fal fa-cogs"></i> <span>Tools</span></a>
+</div>
+<div class="top-menu-item coding-ground">
+<a href="https://www.tutorialspoint.com/codingground.htm" target="_blank" title="Coding Ground - Free Online IDE and Terminal"><i class="fal fa-code"></i> <span>Coding Ground </span></a> 
+</div>
+<div class="top-menu-item current-affairs">
+<a href="https://www.tutorialspoint.com/current_affairs.htm" target="_blank" title="Daily Current Affairs"><i class="fal fa-layer-plus"></i> <span>Current Affairs</span></a>
+</div>
+<div class="top-menu-item upsc-notes">
+<a href="https://www.tutorialspoint.com/upsc_ias_exams.htm" target="_blank" title="UPSC IAS Exams Notes - TutorialsPoint"><i class="fal fa-user-tie"></i> <span>UPSC Notes</span></a>
+</div>      
+<div class="top-menu-item articles">
+<a href="https://www.tutorialspoint.com/tutor_connect/index.php" target="_blank" title="Top Online Tutors - Tutor Connect"><i class="fal fa-user"></i> <span>Online Tutors</span></a>
+</div>
+<div class="top-menu-item whiteboard">
+<a href="https://www.tutorialspoint.com/whiteboard.htm" target="_blank" title="Free Online Whiteboard"><i class="fal fa-chalkboard"></i> <span>Whiteboard</span></a>
+</div>
+<div class="top-menu-item net-meeting">
+<a href="https://www.tutorialspoint.com/netmeeting.php" target="_blank" title="A free tool for online video conferencing"><i class="fal fa-chalkboard-teacher"></i> <span>Net Meeting</span></a> 
+</div>
+<div class="top-menu-item articles">
+<a href="https://www.tutorix.com" target="_blank" title="Tutorx - The Best Learning App" rel="nofollow"><i class="fal fa-video"></i> <span>Tutorix</span></a> 
+</div>        
+<div class="top-menu-item qa login">
+<a href="https://www.tutorialspoint.com/videotutorials/login.php" target="_blank" title="Tutorials Point - Login"><i class="fa fa-sign-in-alt"></i> <span>Login</span></a> 
+</div>        
+<div class="top-menu-item qa login">
+<a href="https://www.tutorialspoint.com/videotutorials/subscription.php" target="_blank" title="Paid Package"><i class="fa fa-book-reader"></i> <span>Packages</span></a> 
+</div>        
+<div class="social-menu-item">
+<a href="https://www.facebook.com/tutorialspointindia" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Facebook"><i class="fab fa-facebook-f"></i></a> 
+<a href="https://www.twitter.com/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint YouTube"><i class="fab fa-youtube"></i></a>
+</div>        
+</div>
+</div>
+<!-- Top sub-menu Ends Here -->
+<!-- Top main-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+<div class="mui-container">
+<div class="left-menu">
+<a href="https://www.tutorialspoint.com/index.htm" title="Tutorialspoint">
+<img class="tp-logo" alt="tutorialspoint" src="images/logo.png">
+</a>
+<div class="mui-dropdown">
+<a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown"><i class="fa fa-th-large"></i> 
+<span>Categories <span class="mui-caret"></span></span></a>            
+<ul class="mui-dropdown__menu cat-menu">
+<li>
+<ul>
+<li><a href="https://www.tutorialspoint.com/academic_tutorials.htm"><i class="fa fa-caret-right"></i> Academic Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/big_data_tutorials.htm"><i class="fa fa-caret-right"></i> Big Data &amp; Analytics </a></li>
+<li><a href="https://www.tutorialspoint.com/computer_programming_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Programming </a></li>
+<li><a href="https://www.tutorialspoint.com/computer_science_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Science </a></li>
+<li><a href="https://www.tutorialspoint.com/database_tutorials.htm"><i class="fa fa-caret-right"></i> Databases </a></li>
+<li><a href="https://www.tutorialspoint.com/devops_tutorials.htm"><i class="fa fa-caret-right"></i> DevOps </a></li>
+<li><a href="https://www.tutorialspoint.com/digital_marketing_tutorials.htm"><i class="fa fa-caret-right"></i> Digital Marketing </a></li>
+<li><a href="https://www.tutorialspoint.com/engineering_tutorials.htm"><i class="fa fa-caret-right"></i> Engineering Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> Exams Syllabus </a></li>
+<li><a href="https://www.tutorialspoint.com/famous_monuments.htm"><i class="fa fa-caret-right"></i> Famous Monuments </a></li>
+<li><a href="https://www.tutorialspoint.com/gate_exams_tutorials.htm"><i class="fa fa-caret-right"></i> GATE Exams Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/latest_technologies.htm"><i class="fa fa-caret-right"></i> Latest Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/machine_learning_tutorials.htm"><i class="fa fa-caret-right"></i> Machine Learning </a></li>
+<li><a href="https://www.tutorialspoint.com/mainframe_tutorials.htm"><i class="fa fa-caret-right"></i> Mainframe Development </a></li>
+<li><a href="https://www.tutorialspoint.com/management_tutorials.htm"><i class="fa fa-caret-right"></i> Management Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/maths_tutorials.htm"><i class="fa fa-caret-right"></i> Mathematics Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/microsoft_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Microsoft Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/misc_tutorials.htm"><i class="fa fa-caret-right"></i> Misc tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/mobile_development_tutorials.htm"><i class="fa fa-caret-right"></i> Mobile Development </a></li>
+<li><a href="https://www.tutorialspoint.com/java_technology_tutorials.htm"><i class="fa fa-caret-right"></i> Java Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/python_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Python Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/sap_tutorials.htm"><i class="fa fa-caret-right"></i> SAP Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/scripting_lnaguage_tutorials.htm"><i class="fa fa-caret-right"></i>Programming Scripts </a></li>
+<li><a href="https://www.tutorialspoint.com/selected_reading.htm"><i class="fa fa-caret-right"></i> Selected Reading </a></li>
+<li><a href="https://www.tutorialspoint.com/software_quality_tutorials.htm"><i class="fa fa-caret-right"></i> Software Quality </a></li>
+<li><a href="https://www.tutorialspoint.com/soft_skill_tutorials.htm"><i class="fa fa-caret-right"></i> Soft Skills </a></li>
+<li><a href="https://www.tutorialspoint.com/telecom_tutorials.htm"><i class="fa fa-caret-right"></i> Telecom Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> UPSC IAS Exams </a></li>
+<li><a href="https://www.tutorialspoint.com/web_development_tutorials.htm"><i class="fa fa-caret-right"></i> Web Development </a></li>
+<li><a href="https://www.tutorialspoint.com/sports_tutorials.htm"><i class="fa fa-caret-right"></i> Sports Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/xml_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> XML Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/multi_language_tutorials.htm"><i class="fa fa-caret-right"></i> Multi-Language</a></li>
+<li><a href="https://www.tutorialspoint.com/questions_and_answers.htm"><i class="fa fa-caret-right"></i> Interview Questions</a></li>
+</ul>
+</li>
+</ul>
+<div class="clear"></div>
+</div> 
+</div>
+<div class="right-menu">
+<div class="toc-toggle">
+<a href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+</div>
+<div class="mobile-search-btn">
+<a href="https://www.tutorialspoint.com/index.htm"><i class="fal fa-search"></i></a>
+</div>
+<div class="search-box">
+<script async src="https://cse.google.com/cse.js?cx=000263362972888060243:yfed6eu421q"></script>
+<div class='gcse-search'></div>
+</div>
+<div class="menu-btn library-btn">
+<a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a>
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a> 
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/questions/index.php"><i class="fa fa-location-arrow"></i> <span>Q/A</span></a>
+</div>
+<div class="menu-btn ebooks-btn">
+<a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a>
+</div>
+<div class="mui-dropdown">
+<button class="mui-btn mui-btn--primary mobile-menu" data-mui-toggle="dropdown">
+<span class="mui-caret"></span>
+</button>
+<ul class="mui-dropdown__menu">
+<li class="login"><a href="https://www.tutorialspoint.com/videotutorials/login.php"><i class="fal fa-sign-in-alt"></i> <span>Login</span></a></li>
+<li><a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a></li>
+<li><a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Top main-menu Ends Here -->
+</header>
+<div class="mui-container-fluid content">
+<div class="mui-container">
+<!-- Tutorial ToC Starts Here -->
+<div class="mui-col-md-3 tutorial-toc">
+<div class="mini-logo">
+<img src="images/accounting_basics-mini-logo.jpg" alt="Accounting Basics Tutorial" />
+</div>
+<ul class="toc chapters">
+<li class="heading">Accounting Basics Tutorial</li>
+<li><a href="index.htm">Accounting - Home</a></li>
+<li><a href="accounting_basics_overview.htm">Accounting - Overview</a></li>
+<li><a href="accounting_process.htm">Accounting - Process</a></li>
+<li><a href="accounting_basic_concepts.htm">Accounting - Basic Concepts</a></li>   
+<li><a href="accounting_conventions.htm">Accounting - Conventions</a></li> 
+<li><a href="accounting_classification_of_accounts.htm">Accounting - Accounts' Classification</a></li> 
+<li><a href="accounting_systems.htm">Accounting - Systems</a></li> 
+</ul>
+<ul class="toc chapters">
+<li class="heading">Financial Accounting</li>
+<li><a href="financial_accounting_journal.htm">Financial Accounting - Journal</a></li>
+<li><a href="financial_accounting_ledger.htm">Financial Accounting - Ledger</a></li>
+<li><a href="financial_accounting_subsidiary_books.htm">Financial Accounting - Books</a></li>
+<li><a href="financial_accounting_depreciation.htm">Financial Accounting - Depreciation</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Cost Accounting</li>   
+<li><a href="cost_accounting_introduction.htm">Cost Accounting - Introduction</a></li>
+<li><a href="cost_accounting_advantages.htm">Cost Accounting - Advantages</a></li>
+<li><a href="cost_accounting_vs_financial_accounting.htm">Cost Accounting - vs. Financial A/c</a></li>
+<li><a href="cost_accounting_classification_of_cost.htm">Cost Accounting - Cost Classification</a></li>
+<li><a href="cost_accounting_elements_of_cost.htm">Cost Accounting - Elements of Cost</a></li>
+<li><a href="cost_accounting_cost_sheet.htm">Cost Accounting - Cost Sheet</a></li>
+<li><a href="cost_accounting_cost_control.htm">Cost Accounting - Cost Control</a></li>
+<li><a href="cost_accounting_cost_reduction.htm">Cost Accounting - Cost Reduction</a></li>
+<li><a href="cost_accounting_budgeting_analysis.htm">Cost Accounting - Budgeting</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Cost Accounting Techniques</li> 
+<li><a href="cost_accounting_marginal_costing.htm">Cost Accounting - Marginal Costing</a></li>
+<li><a href="cost_accounting_standard_costing.htm">Cost Accounting - Standard Costing</a></li>
+<li><a href="cost_accounting_variance_analysis.htm">Cost Accounting - Variance Analysis</a></li>
+<li><a href="cost_accounting_cvp_analysis.htm">Cost Accounting - CVP Analysis</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Management Accounting</li>   
+<li><a href="management_accounting_introduction.htm">Management A/c - Introduction</a></li>
+<li><a href="management_versus_cost_accounting.htm">Management A/c - vs. Cost A/c</a></li>
+<li><a href="management_versus_financial_accounting.htm">Management A/c - vs. Financial A/c</a></li>
+<li><a href="management_accounting_cash_flow.htm">Management A/c - Cash Flow</a></li>
+<li><a href="management_accounting_ratio_analysis.htm">Management A/c - Ratio Analysis</a></li>
+<li><a href="management_accounting_useful_ratios.htm">Management A/c - Useful Ratios</a></li>
+<li><a href="management_accounting_working_capital.htm">Management A/c - Working Capital</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Accounting Useful Resources</li>
+<li><a href="accounting_basics_quick_guide.htm">Accounting Basics - Quick Guide</a></li>
+<li><a href="accounting_basics_useful_resources.htm">Accounting Basics - Useful Resources</a></li>
+<li><a href="accounting_basics_discussion.htm">Accounting Basics - Discussion</a></li>
+</ul>
+<ul class="toc reading">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="https://www.tutorialspoint.com/upsc_ias_exams.htm">UPSC IAS Exams Notes</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+<div id="stickyparent">
+<div style="height:250px;width:300px;" id="sticky-ad">
+<div class="adsbyvli" data-ad-slot="vi_9012177"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9012177")})</script>
+</div>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="mui-col-md-6 tutorial-content">
+<h1>Financial Accounting - Ledger</h1>
+<hr />
+<div id="google-top-ads">
+<div class="top-ad-heading">Advertisements</div>
+<div style="text-align:center" class="google-top-ads">
+<div id="vi_top_ads" style="text-align:center !important;"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_top_ads');
+     var ad_id_728 = "vi_9012178";
+     var ad_id_650 = "vi_9014435";
+     var ad_id_300 = "vi_9017967";
+     var width = window.innerWidth;
+     var ad_id = ad_id_728;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+</div>
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="financial_accounting_journal.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="financial_accounting_subsidiary_books.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="clearer"></div>
+<p>Now let us try to understand how a journal works. With the help of journal entries, we book each and every financial transaction of the organization chronically without considering how many times the same type of entry has been repeated in that particular accounting year or period.</p>
+<p>Journal entries in any organization may vary from hundreds to millions depending upon the size and structure of the organization. With the help of a journal, each of the transactions might be recorded; however, we can conclude nothing from a journal. Let us consider the following cases. Suppose we want to know:</p>
+<ul class="list">
+<li>the total sale value or purchase value</li>
+<li>the total of any particular income or expenses</li>
+<li>the total of amount payable to any particular creditor or receivable from a debtor</li>
+</ul>
+<p>In such cases, it might be a tedious job for any bookkeeper or accountant. Hence, the next step is ledger accounts.</p>
+<p>The ledger helps us in summarizing journal entries of same nature at single place. For example, if we pass 100 times a journal entry for sale, we can create a sales account only once and post all the sales transaction in that ledger account date-wise. Hence, an unlimited number of journal entries can be summarized in a few ledger accounts. Transferring journal entries into a ledger account is called <b>‘posting’</b>.</p>
+<h2>Ruling of Account in Ledger Account</h2>
+<p>Let us see various formats of ledger accounts:</p>
+<h3>Format-1</h3>
+<table class="table table-bordered">
+<tr>
+<td colspan="8" style="text-align:center;">In the books of M/s. ABC Company</td>
+</tr>
+<tr>
+<td colspan="8" style="text-align:center;">Ledger account of M/s XYZ LTD.</td>
+</tr>
+<tr>
+<th colspan="4" style="text-align:center; border-right:1px solid #aaa">Dr.</th>
+<th colspan="4" style="text-align:center;">Cr.</th>
+</tr>
+<tr>
+<th>Date</th>
+<th>Particulars</th>
+<th>F</th>
+<th style=" border-right:1px solid #aaa">Amount</th>
+<th>Date</th>
+<th>Particulars</th>
+<th>F</th>
+<th>Amount</th>
+</tr>
+<tr>
+<td>xxxx</td>
+<td>To Balance b/d</td>
+<td></td>
+<td class="right" style=" border-right:1px solid #aaa">xxx</td>
+<td>Xxxx</td>
+<td>By Balance b/d</td>
+<td></td>
+<td class="right">xxx</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td style="border-right:1px solid #aaa"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>xxxx</td>
+<td>To Name of the debit account</td>
+<td></td>
+<td class="right" style="border-right:1px solid #aaa">xxx</td>
+<td>Xxxx</td>
+<td>By Name of Credit account</td>
+<td></td>
+<td class="right">xxx</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td style="border-right:1px solid #aaa"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>xxxx</td>
+<td>To Balance c/d</td>
+<td></td>
+<td class="right" style="border-right:1px solid #aaa">xx</td>
+<td>xxxx</td>
+<td>By Balance c/d</td>
+<td></td>
+<td class="right">xx</td>
+</tr>
+<tr>
+<td></td>
+<td><b>Total</b></td>
+<td></td>
+<td class="right" style="border-right:1px solid #aaa"><b>xxxx</b></td>
+<td></td>
+<td><b>Total</b></td>
+<td></td>
+<td class="right"><b>xxxx</b></td>
+</tr>
+</table>
+<h3>Format-2</h3>
+<p>Nowadays, the handwritten books are being replaced by computerized accounts. The companies majorly use a six-column format to maintain ledger accounts of their customers. It looks as follows:</p>
+<table class="table table-bordered">
+<tr>
+<td colspan="7" style="text-align:center;">In the books of M/s. ABC Bank Ltd.</td>
+</tr>
+<tr>
+<td colspan="7" style="text-align:center;">Ledger account of M/s XYZ Ltd.</td>
+</tr>
+<tr>
+<th rowspan="2" style="vertical-align:middle">Date</th>
+<th rowspan="2" style="vertical-align:middle">Particulars</th>
+<th rowspan="2" style="vertical-align:middle">LF</th>
+<th colspan="2" style="text-align:center;" width=25%>Amount</th>
+<th colspan="2" style="text-align:center;" width=25%>Balance</th>
+</tr>
+<tr>
+<th>Debit</th>
+<th>Credit</th>
+<th>Dr. / Cr.</th>
+<th>Amount</th>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<p>Format-1 is used for academic purpose. Hence, this format is useful to learn the basics and principles of accounting.</p>
+<p>Format-2 is used by banking and financial organization as well as well as by most of the business organizations.</p>
+<h2>Important Points Regarding Ledger</h2>
+<ul class="list">
+<li><p>Each side of a journal entry is posted in the same side of the ledger. It means the debit entry of a journal is posted in the debit side and vice-a-versa.</p></li>
+<li><p>Balance c/d refers to the balance carried down and balance b/d refers to the balance brought down.</p></li>
+<li><p>After posting in ledger, balancing of ledger is done. In the column named Total, the figure comes on the basis of <b>‘whichever is higher’</b>. Means, if the total of debit side is Rs 10,000 and the total of credit is Rs 5,000, we write Rs 10,000 in the column named Total of both, the debit and the credit side.</p></li>
+<li><p>The difference of both sides (in this case, it is Rs 5,000) is written in the last row of the credit side as <b>‘balance c/d’</b>. This balance is called the debit balance of account or vice-a-versa.</p></li>
+<li><p>All expenses and assets represent debit balance.</p></li>
+<li><p>All the income and liabilities represent credit balance including capital account.</p></li>
+<li><p>Debit balance of personal account represents <b>‘Amount Receivable’</b>. This comes under the category of assets. For example debtors.</p></li>
+<li><p>Credit balance of personal accounts signifies <b>‘Amount Payable’</b>. This comes under liabilities side and represents that we need to pay this amount which is credited due to goods, service, loan, or advance received.</p></li>
+<li><p>Debit side of real account means stock in hand or any kind of assets. Credit balance of Real account is not possible.</p></li>
+<li><p>Debit balance of nominal account means expenses of organization.</p></li>
+<li><p>Credit balance of nominal accounts means income earned.</p></li>
+<li><p>Debit balance of cash book means cash in hand.</p></li>
+<li><p>Debit side of Bank book means balance at bank.</p></li>
+<li><p>Credit balance of Bank book indicates <b>‘Bank Overdraft’</b>.</p></li>
+<li><p>Debit and credit balances of nominal account (Expenses and income will be nil, because these balances get transferred to trading, and profit &amp; loss account to arrive at profit and loss of the company.</p></li>
+<li><p>Balances of real and personal account appear in balance sheet of the company and to be carried forward to next accounting years.</p></li>
+</ul>
+<h2>Illustration</h2>
+<p>Journalize the following transactions and post them in to ledger account:</p>
+<table class="table table-bordered">
+<tr>
+<th>S.No.</th>
+<th>Transactions</th>
+<th style="text-align:right;" >Amount</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Commenced business and introduced cash</td>
+<td style="text-align:right;">400,000.00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Goods purchased for cash</td>
+<td style="text-align:right;">50,000.00</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Goods purchased from Mr.Abdul</td>
+<td style="text-align:right;">135,000.00</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Freight charges paid on purchases</td>
+<td style="text-align:right;">1,500.00</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Computer purchased-cash</td>
+<td style="text-align:right;">35,000.00</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Freight charges paid on purchases of computer</td>
+<td style="text-align:right;">500.00</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Sale made to Mr.Ram</td>
+<td style="text-align:right;">200,000.00</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Rent paid</td>
+<td style="text-align:right;">12,000.00</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Salary paid</td>
+<td style="text-align:right;">15,000.00</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Cash received from Mr.Ram</td>
+<td style="text-align:right;">150,000.00</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Cash deposited in bank</td>
+<td style="text-align:right;">75,000.00</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Office Expenses paid</td>
+<td style="text-align:right;">25,000.00</td>
+</tr>
+</table>
+<h2>Journal Entries</h2>
+<table class="table table-bordered">
+<tr>
+<th rowspan="2">S.No.</th>
+<th rowspan="2">Particulars</th>
+<th rowspan="2">L.F.</th>
+<th colspan="2" style="text-align:center">Amount</th>
+</tr>
+<tr>
+<th style="text-align:center">Debit</th>
+<th style="text-align:center">Credit</th>
+</tr>
+<tr>
+<td>1</td>
+<td>
+<p>Cash A/c <span id="fright">Dr.</span></p>
+<p id="pleft">To Capital A/c</p>
+<p>(Being capital introduced)</p>
+</td>
+<td class="right">**</td>
+<td class="right">4,00,000</td>
+<td style="padding-top:50px;text-align:right;">4,00,000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>
+<p>Purchase A/c <span id="fright">Dr.</span></p>
+<p id="pleft">To Cash A/c</p>
+<p>(Being cash purchase made)</p>
+</td>
+<td class="right">**</td>
+<td class="right">5,00,000</td>
+<td style="padding-top:50px;text-align:right;">5,00,000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>
+<p>Purchase A/c <span id="fright">Dr.</span></p>
+<p id="pleft">To Abdhul A/c</p>
+<p>(Being goods purchase from Abdhul)</p>
+</td>
+<td class="right">**</td>
+<td class="right">135,000</td>
+<td style="padding-top:50px;text-align:right;">1,35,000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>
+<p>Inward Freight Charges A/c <span id="fright">Dr.</span></p>
+<p id="pleft">To Cash A/c</p>
+<p>(Being freight charges Paid)</p>
+</td>
+<td class="right">**</td>
+<td class="right">1,500</td>
+<td style="padding-top:50px;text-align:right;">1,500</td>
+</tr>
+<tr>
+<td>5</td>
+<td>
+<p>Computer A/c <span id="fright">Dr.</span></p>
+<p id="pleft">To Cash A/c</p>
+<p>(Being computer purchased on cash)</p>
+</td>
+<td class="right">**</td>
+<td class="right">35,000</td>
+<td style="padding-top:50px;text-align:right;">35,000</td>
+</tr>
+<tr>
+<td>6</td>
+<td>
+<p>Computer A/c <span id="fright">Dr.</span></p>
+<p id="pleft">To Cash A/c</p>
+<p>(Being freight charges on computer paid)</p>
+</td>
+<td class="right">**</td>
+<td class="right">500</td>
+<td style="padding-top:50px;text-align:right;">500</td>
+</tr>
+<tr>
+<td>7</td>
+<td>
+<p>Ram A/c <span id="right">Dr.</span></p>
+<p id="pleft">To Sale A/c</p>
+<p>(Being sold to Mr. Ram)</p>
+</td>
+<td class="right">**</td>
+<td class="right">2,00,000</td>
+<td style="padding-top:50px;text-align:right;">2,00,000</td>
+</tr>
+<tr>
+<td>8</td>
+<td>
+<p>Rent A/c <span id="fright">Dr.</span></p>
+<p id="pleft">To Cash A/c</p>
+<p>(Being rent paid )</p>
+</td>
+<td class="right">**</td>
+<td class="right">12,000</td>
+<td style="padding-top:50px;text-align:right;">12,000</td>
+</tr>
+<tr>
+<td>9</td>
+<td>
+<p>Salary A/c <span id="fright">Dr.</span></p>
+<p id="pleft">To Cash A/c</p>
+<p>(Being salary paid)</p>
+</td>
+<td class="right">**</td>
+<td class="right">15,000</td>
+<td style="padding-top:50px;text-align:right;">15,000</td>
+</tr>
+<tr>
+<td>10</td>
+<td>
+<p>Cash A/c <span id="fright">Dr.</span></p>
+<p id="pleft">To Ram A/c</p>
+<p>(Being cash Received from Mr. Ram)</p>
+</td>
+<td class="right">**</td>
+<td class="right">1,50,000</td>
+<td style="padding-top:50px;text-align:right;">1,50,000</td>
+</tr>
+<tr>
+<td>11</td>
+<td>
+<p>Bank A/c <span id="fright">Dr.</span></p>
+<p id="pleft">To Cash A/c</p> 
+<p>(Being cash deposited in Bank)</p>
+</td>
+<td class="right">**</td>
+<td class="right">75,000</td>
+<td style="padding-top:50px;text-align:right;">75,000</td>
+</tr>
+<tr>
+<td>12</td>
+<td>
+<p>Office Expenses A/c <span id="fright">Dr.</span></p>
+<p id="pleft">To Cash A/c</p>
+<p>(Being office expenses paid)</p>
+</td>
+<td class="right">**</td>
+<td class="right">25,000</td>
+<td style="padding-top:50px;text-align:right;">25,000</td>
+</tr>
+</table>
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+<a href="financial_accounting_journal.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+</div>
+<div class="nxt-btn">
+<a href="financial_accounting_subsidiary_books.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="space-bottom" style="margin-bottom:20px;"></div>
+<div class="google-bottom-ads" id="google-bottom-ads">
+<div>Advertisements</div>
+<div>
+<div id="vi_bottom_ads"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_bottom_ads');
+     var mobile_ad_id = "vi_9017967";
+     var desktop_ad_id = "vi_9013190";
+     var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+<div class="space-bottom"></div>
+</div>
+</div>
+<!-- Tutorial Content Ends Here -->
+<!-- Right Column Starts Here -->
+<div class="mui-col-md-2 google-right-ads" id="chapter-menu" style="display: none;">
+<input type="hidden" id="vu" name="vu" value=""/>
+<div class="space-top"></div>
+<div class="mui-panel">
+<ul class="paid-menu" id="div-right-menu">
+<li><a class="hide-on-mobile" href="javascript:printPage();" title="Print this page"><i class="fa fa-print"></i> Print</a></li>
+<li><a href="javascript:void(0)" class="add_notes" title="Add Custom Notes" onclick="add_notes();"><i class="fa fa-edit"></i>&nbsp;Add Notes</a></li>
+<li><a href="javascript:void(0)" class="clsPage text-bookmark" id="text-bookmark" title="Add Bookmark" onclick="text_bookmark()"><i class="fal fa-bookmark"></i>&nbsp;Bookmark this page </a></li>
+<li><a href="javascript:void(0);" id="report_error_popup" onclick="report_error_popup();" title="Report Error"><i class="fal fa-bell"></i>&nbsp;Report Error</a></li>
+<li><a href="javascript:void(0);" id="suggestion_popup" title="Give Suggestions" onclick="suggestion_popup();"><i class="fal fa-badge-check"></i>&nbsp;Suggestions</a></li>
+</ul>
+<div class="profile-my-notes" id="text_notes_div" style="display:none;">
+<textarea rows="10" class="text_notes" id="text_notes" name="text_notes" placeholder="Enter your custom notes..."></textarea>
+<br>
+<a href="javascript:void(0);" id="submit_text_notes" class="butn-save" onclick="submit_text_notes();"> Save</a>
+<a href="javascript:void(0);" class="pop-no butn-cancel" onclick="notesClose();"> Close</a>
+<p class="notes_msg"  ></p>
+</div>
+<div class="bottom-menu">
+<button class="tp-btn"><i class="fal fa-box-up"></i> <a href="https://www.tutorialspoint.com/videotutorials/dashboard.php">Dashboard</a></button>
+<button class="tp-btn"><i class="fal fa-sign-out-alt"></i> <a href="https://www.tutorialspoint.com/videotutorials/userlogout.php">Logout</a></button>
+</div>
+</div>
+</div>
+<div class="mui-col-md-2 google-right-ads" id="google-right-ads">
+<div class="space-top"></div>
+<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+<div class="adsbyvli" data-ad-slot="vi_9017966"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017966")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;">
+<div class="adsbyvli" data-ad-slot="vi_9017967"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017967")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+<div class="adsbyvli" data-ad-slot="vi_9013289"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9013289")})</script>
+</div>
+<div class="space-bottom" style="margin-bottom:15px;"></div>
+</div>
+<!-- Right Column Ends Here -->
+</div>
+</div>
+<div class="clear"></div>
+<footer id="footer">
+<div class="mui--text-center">
+<div class="mui--text-caption mui--text-light">
+<a href="https://www.tutorialspoint.com/index.htm" class="logo"><img class="img-responsive" src="../images/logo-black.png" alt="Tutorials Point" title="Tutorials Point"></a>
+</div>
+<ul class="mui-list--inline mui--text-body2 mui--text-light">
+<li><a href="https://www.tutorialspoint.com/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+<li><a href="https://www.tutorialspoint.com/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/teach-with-us.php"><i class="fa fa-user header-icons"></i> Teach with Us</a></li>
+<li><a href="https://www.tutorialspoint.com/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+</ul>
+<div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights Reserved.</div>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-232293-6');
+</script>
+<script src="../videotutorials/js/text_menu.js%3Fv=1"></script>
+<script>
+function readCookie(name) {
+     var nameEQ = name + "=";
+     var ca = document.cookie.split(';');
+     for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+     }
+     return null;
+}
+$(document).ready(function (){
+    var cval = readCookie('subscription_purchased');
+    if(cval == '1'){
+          // logged in and purchased subscription.
+          $('#google-right-ads').remove();
+          $('#vi1').remove();
+          $('#vi2').remove();
+          $('#adp').remove();
+          $('#stickyparent').remove();
+          $('#google-top-ads').remove();
+          $('#google-bottom-ads').remove();
+          $('.tutorial-content hr').remove();
+          $('.login').remove();
+          $('#chapter-menu').show();
+          $('.content h1').css("border-bottom", "none");
+          $('.google-right-ads').css("padding-right", "0px");
+          $('.tutorial-content').css("border-radius", "10px");
+          $('#chapter-menu .mui-panel').css("border-radius", "10px");
+     }
+});
+</script>
+</footer>
+</body>
+</html>

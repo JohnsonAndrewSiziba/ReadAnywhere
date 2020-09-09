@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Cost Accounting - Budgeting Analysis - Tutorialspoint</title>
+<meta charset="utf-8">
+<meta name="description" content="Cost Accounting - Budgeting Analysis - We are all well-familiar with the term budget. Budgeting is a powerful tool that helps the management in performing its functions such as planning, coordinating"/>
+<meta name="keywords" content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Tutorials, Articles, Programming, training, learning, quiz, preferences, examples, code"/>
+<link rel="canonical" href="cost_accounting_budgeting_analysis.htm" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" href="../themes/css/style-min-v1.css%3Fv=3.1.2.335.css">
+<script src="../themes/js/script-min-v1.js%3Fv=3.0.2040221"></script>
+<script>function printPage() { window.print(); }</script>
+<script id="vi1" type="text/javascript" src="https://services.bilsyndication.com/adv1/?q=0a8a90220201327770f6c986bea026a3" defer="" async=""></script>
+<script id="vi2">
+var vitag = vitag || {};
+vitag.outStreamConfig = { enablePC:false, enableMobile:false};
+vitag.smartBannerConfig = { enablePC: false, enableMobile: true, disableHorizontalPosition: "right left middle", disableVerticalPosition: "top middle" };
+</script>
+<script id="adp" data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/18107/adRecover.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<style>
+.butnn-save a{color:#fff;} .notes_msg{color:green; margin-left:20px; margin-top:15px;}
+.right-menu .mui-btn {
+    background-color:#42c2ca;
+}
+a.demo {
+    background:#42c2ca;
+}
+li.heading {
+    background:#42c2ca;
+}
+.course-box{background:#42c2ca}
+.home-intro-sub p{color:#42c2ca}
+</style>
+</head>
+<body>
+<header id="header">
+<!-- pop-up -->
+<div class="pop-modal overlay-pop popdiv">
+<div class="modal-window small">
+<span class="close" title="close">×</span>
+<div class="pop-content">
+</div>
+<span class="msg" ></span>
+</div>
+</div>
+<div class="wrap_loader">
+<div class="imgLoader"><img src="../videotutorials/images/loader.gif" alt="Tutorialspoint" width="70" height="70"></div>
+</div>
+<input type="hidden" id="vu" name="vu" value="" />
+<!-- pop-up -->
+
+<!-- Top sub-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid top-menu">
+<div class="mui-container">
+<div class="top-menu-item home">
+<a href="https://www.tutorialspoint.com/index.htm" target="_blank" title="TutorialsPoint - Home"><i class="fal fa-home"></i> <span>Home</span></a>
+</div>
+<div class="top-menu-item qa">
+<a href="https://www.tutorialspoint.com/about/about_careers.htm" target="_blank" title="Job @ Tutorials Point"><i class="fa fa-suitcase"></i> <span>Jobs</span></a>
+</div>
+<div class="top-menu-item tools">
+<a href="https://www.tutorialspoint.com/online_dev_tools.htm" target="_blank" title="Tools - Online Development and Testing Tools"><i class="fal fa-cogs"></i> <span>Tools</span></a>
+</div>
+<div class="top-menu-item coding-ground">
+<a href="https://www.tutorialspoint.com/codingground.htm" target="_blank" title="Coding Ground - Free Online IDE and Terminal"><i class="fal fa-code"></i> <span>Coding Ground </span></a> 
+</div>
+<div class="top-menu-item current-affairs">
+<a href="https://www.tutorialspoint.com/current_affairs.htm" target="_blank" title="Daily Current Affairs"><i class="fal fa-layer-plus"></i> <span>Current Affairs</span></a>
+</div>
+<div class="top-menu-item upsc-notes">
+<a href="https://www.tutorialspoint.com/upsc_ias_exams.htm" target="_blank" title="UPSC IAS Exams Notes - TutorialsPoint"><i class="fal fa-user-tie"></i> <span>UPSC Notes</span></a>
+</div>      
+<div class="top-menu-item articles">
+<a href="https://www.tutorialspoint.com/tutor_connect/index.php" target="_blank" title="Top Online Tutors - Tutor Connect"><i class="fal fa-user"></i> <span>Online Tutors</span></a>
+</div>
+<div class="top-menu-item whiteboard">
+<a href="https://www.tutorialspoint.com/whiteboard.htm" target="_blank" title="Free Online Whiteboard"><i class="fal fa-chalkboard"></i> <span>Whiteboard</span></a>
+</div>
+<div class="top-menu-item net-meeting">
+<a href="https://www.tutorialspoint.com/netmeeting.php" target="_blank" title="A free tool for online video conferencing"><i class="fal fa-chalkboard-teacher"></i> <span>Net Meeting</span></a> 
+</div>
+<div class="top-menu-item articles">
+<a href="https://www.tutorix.com" target="_blank" title="Tutorx - The Best Learning App" rel="nofollow"><i class="fal fa-video"></i> <span>Tutorix</span></a> 
+</div>        
+<div class="top-menu-item qa login">
+<a href="https://www.tutorialspoint.com/videotutorials/login.php" target="_blank" title="Tutorials Point - Login"><i class="fa fa-sign-in-alt"></i> <span>Login</span></a> 
+</div>        
+<div class="top-menu-item qa login">
+<a href="https://www.tutorialspoint.com/videotutorials/subscription.php" target="_blank" title="Paid Package"><i class="fa fa-book-reader"></i> <span>Packages</span></a> 
+</div>        
+<div class="social-menu-item">
+<a href="https://www.facebook.com/tutorialspointindia" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Facebook"><i class="fab fa-facebook-f"></i></a> 
+<a href="https://www.twitter.com/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint YouTube"><i class="fab fa-youtube"></i></a>
+</div>        
+</div>
+</div>
+<!-- Top sub-menu Ends Here -->
+<!-- Top main-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+<div class="mui-container">
+<div class="left-menu">
+<a href="https://www.tutorialspoint.com/index.htm" title="Tutorialspoint">
+<img class="tp-logo" alt="tutorialspoint" src="images/logo.png">
+</a>
+<div class="mui-dropdown">
+<a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown"><i class="fa fa-th-large"></i> 
+<span>Categories <span class="mui-caret"></span></span></a>            
+<ul class="mui-dropdown__menu cat-menu">
+<li>
+<ul>
+<li><a href="https://www.tutorialspoint.com/academic_tutorials.htm"><i class="fa fa-caret-right"></i> Academic Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/big_data_tutorials.htm"><i class="fa fa-caret-right"></i> Big Data &amp; Analytics </a></li>
+<li><a href="https://www.tutorialspoint.com/computer_programming_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Programming </a></li>
+<li><a href="https://www.tutorialspoint.com/computer_science_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Science </a></li>
+<li><a href="https://www.tutorialspoint.com/database_tutorials.htm"><i class="fa fa-caret-right"></i> Databases </a></li>
+<li><a href="https://www.tutorialspoint.com/devops_tutorials.htm"><i class="fa fa-caret-right"></i> DevOps </a></li>
+<li><a href="https://www.tutorialspoint.com/digital_marketing_tutorials.htm"><i class="fa fa-caret-right"></i> Digital Marketing </a></li>
+<li><a href="https://www.tutorialspoint.com/engineering_tutorials.htm"><i class="fa fa-caret-right"></i> Engineering Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> Exams Syllabus </a></li>
+<li><a href="https://www.tutorialspoint.com/famous_monuments.htm"><i class="fa fa-caret-right"></i> Famous Monuments </a></li>
+<li><a href="https://www.tutorialspoint.com/gate_exams_tutorials.htm"><i class="fa fa-caret-right"></i> GATE Exams Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/latest_technologies.htm"><i class="fa fa-caret-right"></i> Latest Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/machine_learning_tutorials.htm"><i class="fa fa-caret-right"></i> Machine Learning </a></li>
+<li><a href="https://www.tutorialspoint.com/mainframe_tutorials.htm"><i class="fa fa-caret-right"></i> Mainframe Development </a></li>
+<li><a href="https://www.tutorialspoint.com/management_tutorials.htm"><i class="fa fa-caret-right"></i> Management Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/maths_tutorials.htm"><i class="fa fa-caret-right"></i> Mathematics Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/microsoft_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Microsoft Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/misc_tutorials.htm"><i class="fa fa-caret-right"></i> Misc tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/mobile_development_tutorials.htm"><i class="fa fa-caret-right"></i> Mobile Development </a></li>
+<li><a href="https://www.tutorialspoint.com/java_technology_tutorials.htm"><i class="fa fa-caret-right"></i> Java Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/python_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Python Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/sap_tutorials.htm"><i class="fa fa-caret-right"></i> SAP Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/scripting_lnaguage_tutorials.htm"><i class="fa fa-caret-right"></i>Programming Scripts </a></li>
+<li><a href="https://www.tutorialspoint.com/selected_reading.htm"><i class="fa fa-caret-right"></i> Selected Reading </a></li>
+<li><a href="https://www.tutorialspoint.com/software_quality_tutorials.htm"><i class="fa fa-caret-right"></i> Software Quality </a></li>
+<li><a href="https://www.tutorialspoint.com/soft_skill_tutorials.htm"><i class="fa fa-caret-right"></i> Soft Skills </a></li>
+<li><a href="https://www.tutorialspoint.com/telecom_tutorials.htm"><i class="fa fa-caret-right"></i> Telecom Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> UPSC IAS Exams </a></li>
+<li><a href="https://www.tutorialspoint.com/web_development_tutorials.htm"><i class="fa fa-caret-right"></i> Web Development </a></li>
+<li><a href="https://www.tutorialspoint.com/sports_tutorials.htm"><i class="fa fa-caret-right"></i> Sports Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/xml_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> XML Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/multi_language_tutorials.htm"><i class="fa fa-caret-right"></i> Multi-Language</a></li>
+<li><a href="https://www.tutorialspoint.com/questions_and_answers.htm"><i class="fa fa-caret-right"></i> Interview Questions</a></li>
+</ul>
+</li>
+</ul>
+<div class="clear"></div>
+</div> 
+</div>
+<div class="right-menu">
+<div class="toc-toggle">
+<a href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+</div>
+<div class="mobile-search-btn">
+<a href="https://www.tutorialspoint.com/index.htm"><i class="fal fa-search"></i></a>
+</div>
+<div class="search-box">
+<script async src="https://cse.google.com/cse.js?cx=000263362972888060243:yfed6eu421q"></script>
+<div class='gcse-search'></div>
+</div>
+<div class="menu-btn library-btn">
+<a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a>
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a> 
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/questions/index.php"><i class="fa fa-location-arrow"></i> <span>Q/A</span></a>
+</div>
+<div class="menu-btn ebooks-btn">
+<a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a>
+</div>
+<div class="mui-dropdown">
+<button class="mui-btn mui-btn--primary mobile-menu" data-mui-toggle="dropdown">
+<span class="mui-caret"></span>
+</button>
+<ul class="mui-dropdown__menu">
+<li class="login"><a href="https://www.tutorialspoint.com/videotutorials/login.php"><i class="fal fa-sign-in-alt"></i> <span>Login</span></a></li>
+<li><a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a></li>
+<li><a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Top main-menu Ends Here -->
+</header>
+<div class="mui-container-fluid content">
+<div class="mui-container">
+<!-- Tutorial ToC Starts Here -->
+<div class="mui-col-md-3 tutorial-toc">
+<div class="mini-logo">
+<img src="images/accounting_basics-mini-logo.jpg" alt="Accounting Basics Tutorial" />
+</div>
+<ul class="toc chapters">
+<li class="heading">Accounting Basics Tutorial</li>
+<li><a href="index.htm">Accounting - Home</a></li>
+<li><a href="accounting_basics_overview.htm">Accounting - Overview</a></li>
+<li><a href="accounting_process.htm">Accounting - Process</a></li>
+<li><a href="accounting_basic_concepts.htm">Accounting - Basic Concepts</a></li>   
+<li><a href="accounting_conventions.htm">Accounting - Conventions</a></li> 
+<li><a href="accounting_classification_of_accounts.htm">Accounting - Accounts' Classification</a></li> 
+<li><a href="accounting_systems.htm">Accounting - Systems</a></li> 
+</ul>
+<ul class="toc chapters">
+<li class="heading">Financial Accounting</li>
+<li><a href="financial_accounting_journal.htm">Financial Accounting - Journal</a></li>
+<li><a href="financial_accounting_ledger.htm">Financial Accounting - Ledger</a></li>
+<li><a href="financial_accounting_subsidiary_books.htm">Financial Accounting - Books</a></li>
+<li><a href="financial_accounting_depreciation.htm">Financial Accounting - Depreciation</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Cost Accounting</li>   
+<li><a href="cost_accounting_introduction.htm">Cost Accounting - Introduction</a></li>
+<li><a href="cost_accounting_advantages.htm">Cost Accounting - Advantages</a></li>
+<li><a href="cost_accounting_vs_financial_accounting.htm">Cost Accounting - vs. Financial A/c</a></li>
+<li><a href="cost_accounting_classification_of_cost.htm">Cost Accounting - Cost Classification</a></li>
+<li><a href="cost_accounting_elements_of_cost.htm">Cost Accounting - Elements of Cost</a></li>
+<li><a href="cost_accounting_cost_sheet.htm">Cost Accounting - Cost Sheet</a></li>
+<li><a href="cost_accounting_cost_control.htm">Cost Accounting - Cost Control</a></li>
+<li><a href="cost_accounting_cost_reduction.htm">Cost Accounting - Cost Reduction</a></li>
+<li><a href="cost_accounting_budgeting_analysis.htm">Cost Accounting - Budgeting</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Cost Accounting Techniques</li> 
+<li><a href="cost_accounting_marginal_costing.htm">Cost Accounting - Marginal Costing</a></li>
+<li><a href="cost_accounting_standard_costing.htm">Cost Accounting - Standard Costing</a></li>
+<li><a href="cost_accounting_variance_analysis.htm">Cost Accounting - Variance Analysis</a></li>
+<li><a href="cost_accounting_cvp_analysis.htm">Cost Accounting - CVP Analysis</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Management Accounting</li>   
+<li><a href="management_accounting_introduction.htm">Management A/c - Introduction</a></li>
+<li><a href="management_versus_cost_accounting.htm">Management A/c - vs. Cost A/c</a></li>
+<li><a href="management_versus_financial_accounting.htm">Management A/c - vs. Financial A/c</a></li>
+<li><a href="management_accounting_cash_flow.htm">Management A/c - Cash Flow</a></li>
+<li><a href="management_accounting_ratio_analysis.htm">Management A/c - Ratio Analysis</a></li>
+<li><a href="management_accounting_useful_ratios.htm">Management A/c - Useful Ratios</a></li>
+<li><a href="management_accounting_working_capital.htm">Management A/c - Working Capital</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Accounting Useful Resources</li>
+<li><a href="accounting_basics_quick_guide.htm">Accounting Basics - Quick Guide</a></li>
+<li><a href="accounting_basics_useful_resources.htm">Accounting Basics - Useful Resources</a></li>
+<li><a href="accounting_basics_discussion.htm">Accounting Basics - Discussion</a></li>
+</ul>
+<ul class="toc reading">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="https://www.tutorialspoint.com/upsc_ias_exams.htm">UPSC IAS Exams Notes</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+<div id="stickyparent">
+<div style="height:250px;width:300px;" id="sticky-ad">
+<div class="adsbyvli" data-ad-slot="vi_9012177"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9012177")})</script>
+</div>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="mui-col-md-6 tutorial-content">
+<h1>Cost Accounting - Budgeting Analysis</h1>
+<hr />
+<div id="google-top-ads">
+<div class="top-ad-heading">Advertisements</div>
+<div style="text-align:center" class="google-top-ads">
+<div id="vi_top_ads" style="text-align:center !important;"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_top_ads');
+     var ad_id_728 = "vi_9012178";
+     var ad_id_650 = "vi_9014435";
+     var ad_id_300 = "vi_9017967";
+     var width = window.innerWidth;
+     var ad_id = ad_id_728;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+</div>
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="cost_accounting_cost_reduction.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="cost_accounting_marginal_costing.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="clearer"></div>
+<p>We are all well-familiar with the term <b>budget</b>. Budgeting is a powerful tool that helps the management in performing its functions such as planning, coordinating, and controlling the operations efficiently. The definition of budget is,</p>
+<blockquote>
+A plan quantified in monetary terms prepared and approved prior to a define period of time usually showing planned income to be generated and/or expenditure to be incurred during the period and the capital to be employed to attain a given objective.
+<p style="text-align:right;margin-bottom:.3em;">---CIMA, England</p>
+</blockquote>
+<h2>Budget, Budgeting, and Budgetary Control</h2>
+<p>Let us go through the terms sequentially.</p>
+<h3>Budget</h3>
+<p>Budget represents the objectives of any organization that is based on the implication of forecast and related to planned activities.</p>
+<p>Budget is neither an estimate nor a forecast because an estimation is a predetermination of future events, may be based on simple guess or any scientific principles.</p>
+<p>Similarly, a forecast may be an anticipation of events during a specified period of time. A forecast may be for a specific activity of the company. We normally forecast likely events such as sales, production, or any other activity of the organization.</p>
+<p>On the other hand, budget relates to planned policy and program of the organization under planed conditions. It represents the action according to a situation which may or may not take place.</p>
+<h3>Budgeting</h3>
+<p>Budgeting represents the formation of the budget with the help and coordination of all or the various departments of the firm.</p>
+<h3>Budgetary Control</h3>
+<p>Budgetary control is a tool for the management to allocate responsibility and authority in planning for future and to develop a basis of measurement to evaluate the efficiency of operations.</p>
+<p>A budget is a plan of the policy to be pursued during a defined time period. All the actions are based on planning of budget because budget is prepared after studying all the related activities of the company. Budget gives a communication ground to the top management with the staff of the firm who are implementing the policies of the top management.</p>
+<p>Budgetary control helps in coordinating the economic trends, financial position, policies, plans, and actions of an organization.</p>
+<p>Budgetary control also helps the management to ensure and control the plan and activities of the organization. Budgetary control makes it possible by continuous comparison of actual performance with that of the budgets.</p>
+<blockquote>
+Budgets are the individual objectives of a department whereas budgeting may be said to be the act of building budgets. Budgetary Control embraces all this and in addition, includes the science of planning the budgets themselves and utilization of such budget to effect an overall management tool f or the business planning and control.
+<p style="text-align:right;margin-bottom:.3em;">...Rowland and William</p>
+</blockquote>
+<h2>Types of Budgets</h2>
+<p>Budgets can be categorized in various ways. Let us go through the types of budgets in detail.</p>
+<h3>Functional Budgets</h3>
+<p>It relates to any function of the firm such as sales, production, cash, etc. Following budgets are prepared in functional budgets:</p>
+<ul class="list">
+<li>Sales Budget</li>
+<li>Production Budget</li>
+<li>Material Budget</li>
+<li>Manufacturing Budget</li>
+<li>Administrative Cost Budget</li>
+<li>Plant Utilization Budget</li>
+<li>Capital Expenditure Budget</li>
+<li>Research and Development Cost Budget</li>
+<li>Cash Budget</li>
+</ul>
+<h3>Master Budget or Summarized Budget or Finalized Profit plan</h3>
+<p>This budget is very useful for the top management of the company because it covers all the information in a summarized manner.</p>
+<h3>Fixed Budget</h3>
+<p>It is a rigid budget and is drawn on the assumption that there will be no change in the budget level.</p>
+<h3>Flexible Budget</h3>
+<p>It is also called a sliding scale budget. It is useful in:</p>
+<ul class="list">
+<li>the new organizations where it is difficult to foresee,</li>
+<li>the firms where activity level changes due to seasonal nature or change in demand,</li>
+<li>the industries based on change of fashion,</li>
+<li>the units which keep on introducing new products, and</li>
+<li>the firms which are engaged in ship-building business.</li>
+</ul>
+<h3>Zero Base Budgeting</h3>
+<p>Zero base budgeting is not based on the incremental approach; previous year figures are not adopted as base.</p>
+<p>CIMA has defined it as:</p>
+<blockquote>
+As a method of budgeting, where all activities are revaluated each time a budget is set, discrete levels of each activity are valued and combination is chosen to match the funds available.
+</blockquote>
+<h3>Control Ratios</h3>
+<p>Following ratios are used to evaluate the deviations of the actual performance from the budgeted performance. If the ratio is 100% or more, it represents favorable results and vice-a-versa.</p>   
+<table width="100%">
+<tr style="height:80px;">
+<td width="25%" style="text-align:right; padding-right:10px;">
+<b>Capacity Ratio</b>
+</td>
+<td>= 
+<div class="fraction">
+<span class="fup">Actual hours worked</span>
+<span class="bar">/</span>
+<span class="fdn">Budgeted hours</span>
+</div>
+</td>
+</tr>
+<tr style="height:80px;">
+<td style="text-align:right; padding-right:10px;"><b>Activity Ratio</b></td>
+<td>
+<div>
+ =
+<div class="fraction">
+<span class="fup">Standard hours for actual production</span>
+<span class="bar">/</span>
+<span class="fdn">Budgeted hours</span>
+</div>
+&times; 100
+</div>
+</td>
+</tr>
+<tr style="height:80px;">
+<td style="text-align:right; padding-right:10px;"><b>Efficiency Ratio</b></td>
+<td>
+<div>
+ =
+<div class="fraction">
+<span class="fup">Standard hours for actual production</span>
+<span class="bar">/</span>
+<span class="fdn">Actual hours worked</span>
+</div>
+&times; 100
+</div>
+</td>
+</tr>
+<tr style="height:80px;">
+<td style="text-align:right; padding-right:10px;"><b>Calendar Ratio</b></td>
+<td>
+<div>
+ = &nbsp;
+<div class="fraction">
+<span class="fup">Number of actual working days in a period</span>
+<span class="bar">/</span>
+<span class="fdn">Number of working days in the budgeted period</span>
+</div>
+&times; 100
+</div>
+</td>
+</tr>
+</table> 
+<h2>Flexible Budget Vs. Fixed Budget</h2>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center; width:28%; ">Points</th>
+<th style="text-align:center; width:36%;" >Flexible Budget</th>
+<th style="text-align:center; width:36%;">Fixed Budget</th>
+</tr>
+<tr>
+<td>Flexibility</td>
+<td>Due to its nature of flexibility, it may be quickly re-organized according to the level of production.</td>
+<td>After the commencement of a period, fixed budget cannot change according to actual production.</td>
+</tr>
+<tr>
+<td>Condition</td>
+<td>Flexible budget may change according to change in conditions.</td>
+<td>Fixed budget is based on the assumption that conditions will remain unchanged.</td>
+</tr>
+<tr>
+<td>Cost Classification</td>
+<td>Classification of costs is done according to the nature of their variability.</td>
+<td>It is suitable for fixed costs only; no classification is done in fixed budget.</td>
+</tr>
+<tr>
+<td>Comparison</td>
+<td>Comparisons of actual figures with revised standard figures are done according to change in the production level of a concern.</td>
+<td>If there is change in production level, then it is not possible to do a correct comparison.</td>
+</tr>
+<tr>
+<td>Ascertainment of cost</td>
+<td>It is easy to ascertain costs even at different levels of activity.</td>
+<td>If there is change in the production level or circumstances, it is not possible to ascertain costs correctly.</td>
+</tr>
+<tr>
+<td>Cost Control</td>
+<td>It is used as an effective tool to control costs.</td>
+<td>Due to its limitations, it is not used as cost control tool.</td>
+</tr>
+</table>
+<h2>Flexible Budget</h2>
+<p>Flexible budget provides logical comparison. The actual cost at the actual activity is compared with the budgeted cost at the time of preparing a flexible budget. Flexibility recognizes the concept of variability.</p>
+<p>Flexible budget helps in assessing the performance of departments in relation to the activity level achieved. Cost ascertainment is possible at different levels of activities. It is also useful in fixation of price and preparation of quotations.</p>
+<h3>Example</h3>
+<p>With the help of the following given expenses, prepare a budget for production of 10,000 units. Prepare flexible budgets for 5,000 and 8,000 units.</p>
+<table class="table table-bordered">
+<tr>
+<th>Costs</th>
+<th style="text-align:right;">Price per Unit(Rs.)</th>
+</tr>
+<tr>
+<td>Material</td>
+<td style="text-align:right;">75</td>
+</tr>
+<tr>
+<td>Labor</td>
+<td style="text-align:right;">20</td>
+</tr>
+<tr>
+<td>Variable Factory Overheads</td>
+<td style="text-align:right;">15</td>
+</tr>
+<tr>
+<td>Fixed Factory Overheads (Rs 50,000)</td>
+<td style="text-align:right;">5</td>
+</tr>
+<tr>
+<td>Variable Expenses (Direct)</td>
+<td style="text-align:right;">6</td>
+</tr>
+<tr>
+<td>Selling Expenses (20% Fixed)</td>
+<td style="text-align:right;">20</td>
+</tr>
+<tr>
+<td>Distribution Expenses (10% fixed)</td>
+<td style="text-align:right;">10</td>
+</tr>
+<tr>
+<td>Administrative Expenses ( Rs 70,000)</td>
+<td style="text-align:right;">7</td>
+</tr>
+<tr>
+<td>Total cost of Sale per unit</td>
+<td style="text-align:right;">158</td>
+</tr>
+</table>
+<h3>Solution</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th rowspan="2" style=" vertical-align:middle;">Particulars</th>
+<th colspan="2" style="text-align:right;"><b>Output 5000 units</b></th>
+<th colspan="2" style="text-align:right;"><b>Output 5000 units</b></th>
+</tr>
+<tr>
+<th style="text-align:right;"><b>Rate(Rs)</b></th>
+<th style="text-align:right;"><b>Amount</b></th>
+<th style="text-align:right;"><b>Rate(Rs)</b></th>
+<th style="text-align:right;"><b>Amount</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="td"><b>Variable or Product Expenses:</b></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Material</td>
+<td id="td" style="text-align:right;">75.00</td>
+<td id="td" style="text-align:right;">3,75,000</td>
+<td id="td" style="text-align:right;">75.00</td>
+<td id="td" style="text-align:right;">6,00,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Labour</td>
+<td id="td" style="text-align:right;">20.00</td>
+<td id="td" style="text-align:right;">1,00,000</td>
+<td id="td" style="text-align:right;">20.00</td>
+<td id="td" style="text-align:right;">1,60,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Direct Variable Overheads</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">6.00</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">30,000</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">6.00</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">48,000</td>
+</tr>
+<tr>
+<td id="td" style="text-align:right;"><b>Prime Cost</b></td>
+<td id="td" style="text-align:right;"><b>101.00</b></td>
+<td id="td" style="text-align:right;"><b>5,05,000</b></td>
+<td id="td" style="text-align:right;"><b>101.00</b></td>
+<td id="td" style="text-align:right;"><b>8,08,000</b></td>
+</tr>
+<tr>
+<td id="td"><b>Factory Overheads</b></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Variable Overheads</td>
+<td id="td" style="text-align:right;">15.00</td>
+<td id="td" style="text-align:right;">75,000</td>
+<td id="td" style="text-align:right;">15.00</td>
+<td id="td" style="text-align:right;">1,20,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Fixed Overheads</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">10.00</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">50,000</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">6.25</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">50,000</td>
+</tr>
+<tr>
+<td id="td" style="text-align:right;"><b>Work Cost</b></td>
+<td id="td" style="text-align:right;"><b>126.00</b></td>
+<td id="td" style="text-align:right;"><b>6,30,000</b></td>
+<td id="td" style="text-align:right;"><b>122.25</b></td>
+<td id="td" style="text-align:right;"><b>9,78,000</b></td>
+</tr>
+<tr>
+<td id="td" style="text-align:right;">Fixed Administrative Expenses</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">14.00</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">70,000</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">8.75</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">70,000</td>
+</tr>
+<tr>
+<td id="td" style="text-align:right;"><b>Cost of Production</b></td>
+<td id="td" style="text-align:right;"><b>140.00</b></td>
+<td id="td" style="text-align:right;"><b>7,00,000</b></td>
+<td id="td" style="text-align:right;"><b>131.00</b></td>
+<td id="td" style="text-align:right;"><b>10,48,000</b></td>
+</tr>
+<tr>
+<td id="td"><b>Selling Expenses</b></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Fixed 20% of Rs.20/-</td>
+<td id="td" style="text-align:right;">8.00</td>
+<td id="td" style="text-align:right;">40,000</td>
+<td id="td" style="text-align:right;">5.00</td>
+<td id="td" style="text-align:right;">40,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Variable Cost 80% of Rs.20/-</td>
+<td id="td" style="text-align:right;">16.00</td>
+<td id="td" style="text-align:right;">80,000</td>
+<td id="td" style="text-align:right;">16.00</td>
+<td id="td" style="text-align:right;">1,28,000</td>
+</tr>
+<tr>
+<td id="td"><b>Distributed Expenses</b></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Fixed 10% of Rs.10/-</td>
+<td id="td" style="text-align:right;">2.00</td>
+<td id="td" style="text-align:right;">10,000</td>
+<td id="td" style="text-align:right;">1.25</td>
+<td id="td" style="text-align:right;">10,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Variable 90% of Rs.10/-</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">9.00</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">10,000</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">1.25</td>
+<td id="td" style="border-bottom:1pt solid black; text-align:right;">10,000</td>
+</tr>
+<tr>
+<td id="td" style="text-align:right;"><b>Total Cost of Sale</b></td>
+<td id="td" style="text-align:right;"><b>175.00</b></td>
+<td id="td" style="text-align:right;"><b>8,75,000</b></td>
+<td id="td" style="text-align:right;"><b>165.25</b></td>
+<td id="td" style="text-align:right;"><b>12,98,000</b></td>
+</tr>
+</tbody>
+</table>
+<h2>Cash Budget</h2>
+<p>Cash budget comes under the category of financial budget. It is prepared to calculate budgeted cash flows (inflows and outflows) during a specific period of time. Cash budget is useful in determining the optimum level of cash to avoid excessive cash or shortage of cash, which may arise in future.</p>
+<p>With the help of cash budget, we can arrange cash through borrowing funds in case of shortage, and we may invest cash if it is present in excess.</p>
+<p>It is necessary for every business to keep a safe level of cash. Being a part of master budget, the following tasks are included in a cash budget:</p>
+<ul class="list">
+<li>Collection of Cash</li>
+<li>Cash Payments</li>
+<li>Selling Expenses and administrative expensive budget</li>
+</ul>
+<h3>Format</h3>
+<p>If a firm wants to maintain cash balance of Rs 50,000 and in case of shortage the firm borrows funds from Bank, following cash budget is prepared:</p>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Particulars</th>
+<th style="text-align:right;">Q-1</th>
+<th style="text-align:right;">Q-2</th>
+<th style="text-align:right;">Q-3</th>
+<th style="text-align:right;">Q-4</th>
+<th style="text-align:right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"  style="text-align:right;">(Yearly)</td>
+</tr>
+<tr>
+<td id="td">Opening Cash Balance</td>
+<td id="td" style="text-align:right;">40,000</td>
+<td id="td" style="text-align:right;">50,000</td>
+<td id="td" style="text-align:right;">50,000</td>
+<td id="td" style="text-align:right;">50,500</td>
+<td id="td" style="text-align:right;">40,000</td>
+</tr>
+<tr>
+<td id="td">Add; Cash receipts</td>
+<td id="td" style="text-align:right;">80,000</td>
+<td id="td" style="text-align:right;">1,00,000</td>
+<td id="td" style="text-align:right;">90,000</td>
+<td id="td" style="text-align:right;">1,25,000</td>
+<td id="td" style="text-align:right;">3,95,000</td>
+</tr>
+<tr>
+<td id="td" style="font-weight:bold;">Total available Cash (A)</td>
+<td id="td" style="border-bottom:1pt solid black;text-align:right;">1,20,000</td>
+<td id="td" style="border-bottom:1pt solid black;text-align:right;">1,50,000</td>
+<td id="td" style="border-bottom:1pt solid black;text-align:right;">1,40,000</td>
+<td id="td" style="border-bottom:1pt solid black;text-align:right;">1,75,500</td>
+<td id="td" style="border-bottom:1pt solid black;text-align:right;">4,35,000</td>
+</tr>
+<tr>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+</tr>
+<tr>
+<td id="td">Less: Cash Payments:</td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Direct Material</td>
+<td id="td" style="text-align:right;">30,000</td>
+<td id="td" style="text-align:right;">40,000</td>
+<td id="td" style="text-align:right;">38,000</td>
+<td id="td" style="text-align:right;">42,000</td>
+<td id="td" style="text-align:right;">1,50,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Direct Labour</td>
+<td id="td" style="text-align:right;">12,000</td>
+<td id="td" style="text-align:right;">15,000</td>
+<td id="td" style="text-align:right;">14,000</td>
+<td id="td" style="text-align:right;">16,000</td>
+<td id="td" style="text-align:right;">57,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Factory Overheads</td>
+<td id="td" style="text-align:right;">18,000</td>
+<td id="td" style="text-align:right;">19,000</td>
+<td id="td" style="text-align:right;">17,000</td>
+<td id="td" style="text-align:right;">20,000</td>
+<td id="td" style="text-align:right;">74,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Administrative Expenses</td>
+<td id="td" style="text-align:right;">16,000</td>
+<td id="td" style="text-align:right;">16,000</td>
+<td id="td" style="text-align:right;">16,000</td>
+<td id="td" style="text-align:right;">16,000</td>
+<td id="td" style="text-align:right;">64,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Selling &amp; Distribution Exp.</td>
+<td id="td" style="text-align:right;">9,000</td>
+<td id="td" style="text-align:right;">10,000</td>
+<td id="td" style="text-align:right;">11,000</td>
+<td id="td" style="text-align:right;">12,000</td>
+<td id="td" style="text-align:right;">42,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Purchase of Fixed Assets</td>
+<td id="td" style="text-align:right;">-</td>
+<td id="td" style="text-align:right;">-</td>
+<td id="td" style="text-align:right;">40,000</td>
+<td id="td" style="text-align:right;">-</td>
+<td id="td" style="text-align:right;">40,000</td>
+</tr>
+<tr>
+<td id="td" style="font-weight:bold;">Total Cash Payments (B)</td>
+<td id="td" style="text-align:right;font-weight:bold;">85,000</td>
+<td id="td" style="text-align:right;font-weight:bold;">1,00,000</td>
+<td id="td" style="text-align:right;font-weight:bold;">1,36,000</td>
+<td id="td" style="text-align:right;font-weight:bold;">1,06,000</td>
+<td id="td" style="text-align:right;font-weight:bold;">4,27,000</td>
+</tr>
+<tr>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+</tr>
+<tr>
+<td id="td" style="font-weight:bold;">Cash in hand C (A-B)</td>
+<td id="td" style="border-bottom:1pt solid black;font-weight:bold;text-align:right;">35,000</td>
+<td id="td" style="border-bottom:1pt solid black;font-weight:bold;text-align:right;">50,000</td>
+<td id="td" style="border-bottom:1pt solid black;font-weight:bold;text-align:right;">4,000</td>
+<td id="td" style="border-bottom:1pt solid black;font-weight:bold;text-align:right;">69,500</td>
+<td id="td" style="border-bottom:1pt solid black;font-weight:bold;text-align:right;">8,000</td>
+</tr>
+<tr>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+</tr>
+<tr>
+<td id="td">Financing Activities:</td>
+<td id="td" style="text-align:right;">15,000</td>
+<td id="td" style="text-align:right;">-</td>
+<td id="td" style="text-align:right;">50,000</td>
+<td id="td" style="text-align:right;">-</td>
+<td id="td" style="text-align:right;">65,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Borrowings</td>
+<td id="td"></td>
+<td id="td" style="text-align:right;">-</td>
+<td id="td" style="text-align:right;">-3,000</td>
+<td id="td" style="text-align:right;">-18,000</td>
+<td id="td" style="text-align:right;">-21,000</td>
+</tr>
+<tr>
+<td id="td">Repayments of Borrowings</td>
+<td id="td"></td>
+<td id="td" style="text-align:right;">-</td>
+<td id="td" style="text-align:right;">-500</td>
+<td id="td" style="text-align:right;">-1,500</td>
+<td id="td" style="text-align:right;">-2,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Interest paid</td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+</tr>
+<tr>
+<td id="td">Net Cash Flows from financing</td>
+<td id="td" style="text-align:right;">23,000</td>
+<td id="td" style="text-align:right;">0</td>
+<td id="td" style="text-align:right;">46,500</td>
+<td id="td" style="text-align:right;">-19,500</td>
+<td id="td" style="text-align:right;">50,000</td>
+</tr>
+<tr>
+<td id="td" style="padding-left:6%;">Activities ( D)</td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+<td id="td"></td>
+</tr>
+<tr>
+<td id="td" style="font-weight:bold;">Closing Cash Balance E (C+D)</td>
+<td id="td" style="text-align:right;font-weight:bold;">58,000</td>
+<td id="td" style="text-align:right;font-weight:bold;">50,000</td>
+<td id="td" style="text-align:right;font-weight:bold;">50,500</td>
+<td id="td" style="text-align:right;font-weight:bold;">50,000</td>
+<td id="td" style="text-align:right;font-weight:bold;">50,000</td>
+</tr>
+</tbody>
+</table>
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+<a href="cost_accounting_cost_reduction.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+</div>
+<div class="nxt-btn">
+<a href="cost_accounting_marginal_costing.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="space-bottom" style="margin-bottom:20px;"></div>
+<div class="google-bottom-ads" id="google-bottom-ads">
+<div>Advertisements</div>
+<div>
+<div id="vi_bottom_ads"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_bottom_ads');
+     var mobile_ad_id = "vi_9017967";
+     var desktop_ad_id = "vi_9013190";
+     var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+<div class="space-bottom"></div>
+</div>
+</div>
+<!-- Tutorial Content Ends Here -->
+<!-- Right Column Starts Here -->
+<div class="mui-col-md-2 google-right-ads" id="chapter-menu" style="display: none;">
+<input type="hidden" id="vu" name="vu" value=""/>
+<div class="space-top"></div>
+<div class="mui-panel">
+<ul class="paid-menu" id="div-right-menu">
+<li><a class="hide-on-mobile" href="javascript:printPage();" title="Print this page"><i class="fa fa-print"></i> Print</a></li>
+<li><a href="javascript:void(0)" class="add_notes" title="Add Custom Notes" onclick="add_notes();"><i class="fa fa-edit"></i>&nbsp;Add Notes</a></li>
+<li><a href="javascript:void(0)" class="clsPage text-bookmark" id="text-bookmark" title="Add Bookmark" onclick="text_bookmark()"><i class="fal fa-bookmark"></i>&nbsp;Bookmark this page </a></li>
+<li><a href="javascript:void(0);" id="report_error_popup" onclick="report_error_popup();" title="Report Error"><i class="fal fa-bell"></i>&nbsp;Report Error</a></li>
+<li><a href="javascript:void(0);" id="suggestion_popup" title="Give Suggestions" onclick="suggestion_popup();"><i class="fal fa-badge-check"></i>&nbsp;Suggestions</a></li>
+</ul>
+<div class="profile-my-notes" id="text_notes_div" style="display:none;">
+<textarea rows="10" class="text_notes" id="text_notes" name="text_notes" placeholder="Enter your custom notes..."></textarea>
+<br>
+<a href="javascript:void(0);" id="submit_text_notes" class="butn-save" onclick="submit_text_notes();"> Save</a>
+<a href="javascript:void(0);" class="pop-no butn-cancel" onclick="notesClose();"> Close</a>
+<p class="notes_msg"  ></p>
+</div>
+<div class="bottom-menu">
+<button class="tp-btn"><i class="fal fa-box-up"></i> <a href="https://www.tutorialspoint.com/videotutorials/dashboard.php">Dashboard</a></button>
+<button class="tp-btn"><i class="fal fa-sign-out-alt"></i> <a href="https://www.tutorialspoint.com/videotutorials/userlogout.php">Logout</a></button>
+</div>
+</div>
+</div>
+<div class="mui-col-md-2 google-right-ads" id="google-right-ads">
+<div class="space-top"></div>
+<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+<div class="adsbyvli" data-ad-slot="vi_9017966"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017966")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;">
+<div class="adsbyvli" data-ad-slot="vi_9017967"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017967")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+<div class="adsbyvli" data-ad-slot="vi_9013289"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9013289")})</script>
+</div>
+<div class="space-bottom" style="margin-bottom:15px;"></div>
+</div>
+<!-- Right Column Ends Here -->
+</div>
+</div>
+<div class="clear"></div>
+<footer id="footer">
+<div class="mui--text-center">
+<div class="mui--text-caption mui--text-light">
+<a href="https://www.tutorialspoint.com/index.htm" class="logo"><img class="img-responsive" src="../images/logo-black.png" alt="Tutorials Point" title="Tutorials Point"></a>
+</div>
+<ul class="mui-list--inline mui--text-body2 mui--text-light">
+<li><a href="https://www.tutorialspoint.com/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+<li><a href="https://www.tutorialspoint.com/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/teach-with-us.php"><i class="fa fa-user header-icons"></i> Teach with Us</a></li>
+<li><a href="https://www.tutorialspoint.com/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+</ul>
+<div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights Reserved.</div>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-232293-6');
+</script>
+<script src="../videotutorials/js/text_menu.js%3Fv=1"></script>
+<script>
+function readCookie(name) {
+     var nameEQ = name + "=";
+     var ca = document.cookie.split(';');
+     for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+     }
+     return null;
+}
+$(document).ready(function (){
+    var cval = readCookie('subscription_purchased');
+    if(cval == '1'){
+          // logged in and purchased subscription.
+          $('#google-right-ads').remove();
+          $('#vi1').remove();
+          $('#vi2').remove();
+          $('#adp').remove();
+          $('#stickyparent').remove();
+          $('#google-top-ads').remove();
+          $('#google-bottom-ads').remove();
+          $('.tutorial-content hr').remove();
+          $('.login').remove();
+          $('#chapter-menu').show();
+          $('.content h1').css("border-bottom", "none");
+          $('.google-right-ads').css("padding-right", "0px");
+          $('.tutorial-content').css("border-radius", "10px");
+          $('#chapter-menu .mui-panel').css("border-radius", "10px");
+     }
+});
+</script>
+</footer>
+</body>
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Graph & Graph Models - Tutorialspoint</title>
+<meta charset="utf-8">
+<meta name="description" content="Graph & Graph Models - The previous part brought forth the different tools for reasoning, proofing and problem solving. In this part, we will study the discrete structures that form t"/>
+<meta name="keywords" content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Tutorials, Articles, Programming, training, learning, quiz, preferences, examples, code"/>
+<link rel="canonical" href="graph_and_graph_models.htm" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" href="../themes/css/style-min-v1.css%3Fv=3.1.2.335.css">
+<script src="../themes/js/script-min-v1.js%3Fv=3.0.2040221"></script>
+<script>function printPage() { window.print(); }</script>
+<script id="vi1" type="text/javascript" src="https://services.bilsyndication.com/adv1/?q=0a8a90220201327770f6c986bea026a3" defer="" async=""></script>
+<script id="vi2">
+var vitag = vitag || {};
+vitag.outStreamConfig = { enablePC:false, enableMobile:false};
+vitag.smartBannerConfig = { enablePC: false, enableMobile: true, disableHorizontalPosition: "right left middle", disableVerticalPosition: "top middle" };
+</script>
+<script id="adp" data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/18107/adRecover.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<style>
+.butnn-save a{color:#fff;} .notes_msg{color:green; margin-left:20px; margin-top:15px;}
+.right-menu .mui-btn {
+    background-color:#016884;
+}
+a.demo {
+    background:#016884;
+}
+li.heading {
+    background:#016884;
+}
+.course-box{background:#016884}
+.home-intro-sub p{color:#016884}
+</style>
+</head>
+<body>
+<header id="header">
+<!-- pop-up -->
+<div class="pop-modal overlay-pop popdiv">
+<div class="modal-window small">
+<span class="close" title="close">×</span>
+<div class="pop-content">
+</div>
+<span class="msg" ></span>
+</div>
+</div>
+<div class="wrap_loader">
+<div class="imgLoader"><img src="../videotutorials/images/loader.gif" alt="Tutorialspoint" width="70" height="70"></div>
+</div>
+<input type="hidden" id="vu" name="vu" value="" />
+<!-- pop-up -->
+
+<!-- Top sub-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid top-menu">
+<div class="mui-container">
+<div class="top-menu-item home">
+<a href="https://www.tutorialspoint.com/index.htm" target="_blank" title="TutorialsPoint - Home"><i class="fal fa-home"></i> <span>Home</span></a>
+</div>
+<div class="top-menu-item qa">
+<a href="https://www.tutorialspoint.com/about/about_careers.htm" target="_blank" title="Job @ Tutorials Point"><i class="fa fa-suitcase"></i> <span>Jobs</span></a>
+</div>
+<div class="top-menu-item tools">
+<a href="https://www.tutorialspoint.com/online_dev_tools.htm" target="_blank" title="Tools - Online Development and Testing Tools"><i class="fal fa-cogs"></i> <span>Tools</span></a>
+</div>
+<div class="top-menu-item coding-ground">
+<a href="https://www.tutorialspoint.com/codingground.htm" target="_blank" title="Coding Ground - Free Online IDE and Terminal"><i class="fal fa-code"></i> <span>Coding Ground </span></a> 
+</div>
+<div class="top-menu-item current-affairs">
+<a href="https://www.tutorialspoint.com/current_affairs.htm" target="_blank" title="Daily Current Affairs"><i class="fal fa-layer-plus"></i> <span>Current Affairs</span></a>
+</div>
+<div class="top-menu-item upsc-notes">
+<a href="https://www.tutorialspoint.com/upsc_ias_exams.htm" target="_blank" title="UPSC IAS Exams Notes - TutorialsPoint"><i class="fal fa-user-tie"></i> <span>UPSC Notes</span></a>
+</div>      
+<div class="top-menu-item articles">
+<a href="https://www.tutorialspoint.com/tutor_connect/index.php" target="_blank" title="Top Online Tutors - Tutor Connect"><i class="fal fa-user"></i> <span>Online Tutors</span></a>
+</div>
+<div class="top-menu-item whiteboard">
+<a href="https://www.tutorialspoint.com/whiteboard.htm" target="_blank" title="Free Online Whiteboard"><i class="fal fa-chalkboard"></i> <span>Whiteboard</span></a>
+</div>
+<div class="top-menu-item net-meeting">
+<a href="https://www.tutorialspoint.com/netmeeting.php" target="_blank" title="A free tool for online video conferencing"><i class="fal fa-chalkboard-teacher"></i> <span>Net Meeting</span></a> 
+</div>
+<div class="top-menu-item articles">
+<a href="https://www.tutorix.com" target="_blank" title="Tutorx - The Best Learning App" rel="nofollow"><i class="fal fa-video"></i> <span>Tutorix</span></a> 
+</div>        
+<div class="top-menu-item qa login">
+<a href="https://www.tutorialspoint.com/videotutorials/login.php" target="_blank" title="Tutorials Point - Login"><i class="fa fa-sign-in-alt"></i> <span>Login</span></a> 
+</div>        
+<div class="top-menu-item qa login">
+<a href="https://www.tutorialspoint.com/videotutorials/subscription.php" target="_blank" title="Paid Package"><i class="fa fa-book-reader"></i> <span>Packages</span></a> 
+</div>        
+<div class="social-menu-item">
+<a href="https://www.facebook.com/tutorialspointindia" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Facebook"><i class="fab fa-facebook-f"></i></a> 
+<a href="https://www.twitter.com/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint YouTube"><i class="fab fa-youtube"></i></a>
+</div>        
+</div>
+</div>
+<!-- Top sub-menu Ends Here -->
+<!-- Top main-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+<div class="mui-container">
+<div class="left-menu">
+<a href="https://www.tutorialspoint.com/index.htm" title="Tutorialspoint">
+<img class="tp-logo" alt="tutorialspoint" src="images/logo.png">
+</a>
+<div class="mui-dropdown">
+<a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown"><i class="fa fa-th-large"></i> 
+<span>Categories <span class="mui-caret"></span></span></a>            
+<ul class="mui-dropdown__menu cat-menu">
+<li>
+<ul>
+<li><a href="https://www.tutorialspoint.com/academic_tutorials.htm"><i class="fa fa-caret-right"></i> Academic Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/big_data_tutorials.htm"><i class="fa fa-caret-right"></i> Big Data &amp; Analytics </a></li>
+<li><a href="https://www.tutorialspoint.com/computer_programming_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Programming </a></li>
+<li><a href="https://www.tutorialspoint.com/computer_science_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Science </a></li>
+<li><a href="https://www.tutorialspoint.com/database_tutorials.htm"><i class="fa fa-caret-right"></i> Databases </a></li>
+<li><a href="https://www.tutorialspoint.com/devops_tutorials.htm"><i class="fa fa-caret-right"></i> DevOps </a></li>
+<li><a href="https://www.tutorialspoint.com/digital_marketing_tutorials.htm"><i class="fa fa-caret-right"></i> Digital Marketing </a></li>
+<li><a href="https://www.tutorialspoint.com/engineering_tutorials.htm"><i class="fa fa-caret-right"></i> Engineering Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> Exams Syllabus </a></li>
+<li><a href="https://www.tutorialspoint.com/famous_monuments.htm"><i class="fa fa-caret-right"></i> Famous Monuments </a></li>
+<li><a href="https://www.tutorialspoint.com/gate_exams_tutorials.htm"><i class="fa fa-caret-right"></i> GATE Exams Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/latest_technologies.htm"><i class="fa fa-caret-right"></i> Latest Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/machine_learning_tutorials.htm"><i class="fa fa-caret-right"></i> Machine Learning </a></li>
+<li><a href="https://www.tutorialspoint.com/mainframe_tutorials.htm"><i class="fa fa-caret-right"></i> Mainframe Development </a></li>
+<li><a href="https://www.tutorialspoint.com/management_tutorials.htm"><i class="fa fa-caret-right"></i> Management Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/maths_tutorials.htm"><i class="fa fa-caret-right"></i> Mathematics Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/microsoft_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Microsoft Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/misc_tutorials.htm"><i class="fa fa-caret-right"></i> Misc tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/mobile_development_tutorials.htm"><i class="fa fa-caret-right"></i> Mobile Development </a></li>
+<li><a href="https://www.tutorialspoint.com/java_technology_tutorials.htm"><i class="fa fa-caret-right"></i> Java Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/python_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Python Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/sap_tutorials.htm"><i class="fa fa-caret-right"></i> SAP Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/scripting_lnaguage_tutorials.htm"><i class="fa fa-caret-right"></i>Programming Scripts </a></li>
+<li><a href="https://www.tutorialspoint.com/selected_reading.htm"><i class="fa fa-caret-right"></i> Selected Reading </a></li>
+<li><a href="https://www.tutorialspoint.com/software_quality_tutorials.htm"><i class="fa fa-caret-right"></i> Software Quality </a></li>
+<li><a href="https://www.tutorialspoint.com/soft_skill_tutorials.htm"><i class="fa fa-caret-right"></i> Soft Skills </a></li>
+<li><a href="https://www.tutorialspoint.com/telecom_tutorials.htm"><i class="fa fa-caret-right"></i> Telecom Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> UPSC IAS Exams </a></li>
+<li><a href="https://www.tutorialspoint.com/web_development_tutorials.htm"><i class="fa fa-caret-right"></i> Web Development </a></li>
+<li><a href="https://www.tutorialspoint.com/sports_tutorials.htm"><i class="fa fa-caret-right"></i> Sports Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/xml_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> XML Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/multi_language_tutorials.htm"><i class="fa fa-caret-right"></i> Multi-Language</a></li>
+<li><a href="https://www.tutorialspoint.com/questions_and_answers.htm"><i class="fa fa-caret-right"></i> Interview Questions</a></li>
+</ul>
+</li>
+</ul>
+<div class="clear"></div>
+</div> 
+</div>
+<div class="right-menu">
+<div class="toc-toggle">
+<a href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+</div>
+<div class="mobile-search-btn">
+<a href="https://www.tutorialspoint.com/index.htm"><i class="fal fa-search"></i></a>
+</div>
+<div class="search-box">
+<script async src="https://cse.google.com/cse.js?cx=000263362972888060243:yfed6eu421q"></script>
+<div class='gcse-search'></div>
+</div>
+<div class="menu-btn library-btn">
+<a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a>
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a> 
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/questions/index.php"><i class="fa fa-location-arrow"></i> <span>Q/A</span></a>
+</div>
+<div class="menu-btn ebooks-btn">
+<a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a>
+</div>
+<div class="mui-dropdown">
+<button class="mui-btn mui-btn--primary mobile-menu" data-mui-toggle="dropdown">
+<span class="mui-caret"></span>
+</button>
+<ul class="mui-dropdown__menu">
+<li class="login"><a href="https://www.tutorialspoint.com/videotutorials/login.php"><i class="fal fa-sign-in-alt"></i> <span>Login</span></a></li>
+<li><a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a></li>
+<li><a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Top main-menu Ends Here -->
+</header>
+<div class="mui-container-fluid content">
+<div class="mui-container">
+<!-- Tutorial ToC Starts Here -->
+<div class="mui-col-md-3 tutorial-toc">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+linebreaks: { automatic: true, width: "container" }
+}
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+<div class="mini-logo">
+<img src="images/discrete-mathematics-mini-logo.jpg" alt="Discrete Mathematics Tutorial" />
+</div>
+<ul class="toc chapters">
+<li class="heading">Discrete Mathematics Tutorial</li>
+<li><a href="index.htm">Discrete Mathematics - Home</a></li>
+<li><a href="discrete_mathematics_introduction.htm">Discrete Mathematics - Introduction</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Sets, Relations, &amp; Functions</li>
+<li><a href="discrete_mathematics_sets.htm">Discrete Mathematics - Sets</a></li>
+<li><a href="discrete_mathematics_relations.htm">Discrete Mathematics - Relations</a></li>
+<li><a href="discrete_mathematics_functions.htm">Discrete Mathematics - Functions</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Mathematical Logic</li>
+<li><a href="discrete_mathematics_propositional_logic.htm">Propositional Logic</a></li>
+<li><a href="discrete_mathematics_predicate_logic.htm">Predicate Logic</a></li>
+<li><a href="rules_of_inference.htm">Rules of Inference</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Group Theory</li>
+<li><a href="operators_and_postulates.htm">Operators &amp; Postulates</a></li>
+<li><a href="discrete_mathematics_group_theory.htm">Group Theory</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Counting &amp; Probability</li>
+<li><a href="discrete_mathematics_counting_theory.htm">Counting Theory</a></li>
+<li><a href="discrete_mathematics_probability.htm">Probability</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Mathematical &amp; Recurrence</li>
+<li><a href="discrete_mathematical_induction.htm">Mathematical Induction</a></li>
+<li><a href="discrete_mathematics_recurrence_relation.htm">Recurrence Relation</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Discrete Structures</li>
+<li><a href="graph_and_graph_models.htm">Graph &amp; Graph Models</a></li>
+<li><a href="more_on_graphs.htm">More on Graphs</a></li>
+<li><a href="introduction_to_trees.htm">Introduction to Trees</a></li>
+<li><a href="discrete_mathematics_spanning_trees.htm">Spanning Trees</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Boolean Algebra</li>
+<li><a href="boolean_expressions_functions.htm">Boolean Expressions &amp; Functions</a></li>
+<li><a href="simplification_of_boolean_functions.htm">Simplification of Boolean Functions</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Discrete Mathematics Resources</li>
+<li><a href="discrete_mathematics_quick_guide.htm">Discrete Mathematics - Quick Guide</a></li>
+<li><a href="discrete_mathematics_useful_resources.htm">Discrete Mathematics - Resources</a></li>
+<li><a href="discrete_mathematics_discussion.htm">Discrete Mathematics - Discussion</a></li>
+</ul>
+<ul class="toc reading">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="https://www.tutorialspoint.com/upsc_ias_exams.htm">UPSC IAS Exams Notes</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+<div id="stickyparent">
+<div style="height:250px;width:300px;" id="sticky-ad">
+<div class="adsbyvli" data-ad-slot="vi_9012177"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9012177")})</script>
+</div>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="mui-col-md-6 tutorial-content">
+<h1>Graph &amp; Graph Models</h1>
+<hr />
+<div id="google-top-ads">
+<div class="top-ad-heading">Advertisements</div>
+<div style="text-align:center" class="google-top-ads">
+<div id="vi_top_ads" style="text-align:center !important;"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_top_ads');
+     var ad_id_728 = "vi_9012178";
+     var ad_id_650 = "vi_9014435";
+     var ad_id_300 = "vi_9017967";
+     var width = window.innerWidth;
+     var ad_id = ad_id_728;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+</div>
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="discrete_mathematics_recurrence_relation.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="more_on_graphs.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="clearer"></div>
+<p>The previous part brought forth the different tools for reasoning, proofing and problem solving. In this part, we will study the discrete structures that form the basis of formulating many a real-life problem.</p>
+<p>The two discrete structures that we will cover are graphs and trees. A graph is a set of points, called nodes or vertices, which are interconnected by a set of lines called edges. The study of graphs, or <b>graph theory</b> is an important part of a number of disciplines in the fields of mathematics, engineering and computer science.</p>
+<h2>What is a Graph?</h2>
+<p><b>Definition</b> &minus; A graph (denoted as $G = (V, E)$) consists of a non-empty set of vertices or nodes V and a set of edges E.</p>
+<p><b>Example</b> &minus; Let us consider, a Graph is $G = (V, E)$ where $V = \lbrace a, b, c, d \rbrace $ and $E = \lbrace \lbrace a, b \rbrace, \lbrace a, c \rbrace, \lbrace b, c \rbrace, \lbrace c, d \rbrace \rbrace$</p>
+<img src="images/graph.jpg" alt="Graph" />
+<p><b>Degree of a Vertex</b> &minus; The degree of a vertex V of a graph G (denoted by deg (V)) is the number of edges incident with the vertex V.</p>
+<table style="text-align:center; width:50%" align="center" class="table table-bordered">
+<tr>
+<th style="text-align:center">Vertex</th>
+<th style="text-align:center">Degree</th>
+<th style="text-align:center">Even / Odd</th>
+</tr>
+<tr>
+<td>a</td>
+<td>2</td>
+<td>even</td>
+</tr>
+<tr>
+<td>b</td>
+<td>2</td>
+<td>even</td>
+</tr>
+<tr>
+<td>c</td>
+<td>3</td>
+<td>odd</td>
+</tr>
+<tr>
+<td>d</td>
+<td>1</td>
+<td>odd</td>
+</tr>
+</table>
+<p><b>Even and Odd Vertex</b> &minus; If the degree of a vertex is even, the vertex is called an even vertex and if the degree of a vertex is odd, the vertex is called an odd vertex.</p>
+<p><b>Degree of a Graph</b> &minus; The degree of a graph is the largest vertex degree of that graph. For the above graph the degree of the graph is 3.</p>
+<p><b>The Handshaking Lemma</b> &minus; In a graph, the sum of all the degrees of all the vertices is equal to twice the number of edges.</p>
+<h2>Types of Graphs</h2>
+<p>There are different types of graphs, which we will learn in the following section.</p>
+<h3>Null Graph</h3>
+<p>A null graph has no edges. The null graph of $n$ vertices is denoted by $N_n$</p>
+<img src="images/null_graph.jpg" alt="Null Graph" />
+<h3>Simple Graph</h3>
+<p>A graph is called simple graph/strict graph if the graph is undirected and does not contain any loops or multiple edges.</p>
+<img src="images/simple_graph.jpg" alt="Simple Graph" />
+<h3>Multi-Graph</h3>
+<p>If in a graph multiple edges between the same set of vertices are allowed, it is called Multigraph. In other words, it is a graph having at least one loop or multiple edges.</p>
+<img src="images/multi_graph.jpg" alt="Multi-Graph" />
+<h3>Directed and Undirected Graph</h3>
+<p>A graph $G = (V, E)$ is called a directed graph if the edge set is made of ordered vertex pair and a graph is called undirected if the edge set is made of unordered vertex pair.</p>
+<img src="images/undirected_graph.jpg" alt="Undirected Graph" />
+<img src="images/directed_graph.jpg" alt="Directed Graph" />
+<h3>Connected and Disconnected Graph</h3>
+<p>A graph is connected if any two vertices of the graph are connected by a path; while a graph is disconnected if at least two vertices of the graph are not connected by a path. If a graph G is disconnected, then every maximal connected subgraph of $G$ is called a connected component of the graph $G$.</p>
+<img src="images/connected_graph.jpg" alt="Connected graph" />
+<img src="images/unconnected_graph.jpg" alt=" Unconnected graph" />
+<h3>Regular Graph</h3>
+<p>A graph is regular if all the vertices of the graph have the same degree. In a regular graph G of degree $r$, the degree of each vertex of $G$ is r.</p>
+<img src="images/regular_graph.jpg" alt="regular_graph" />
+<h3>Complete Graph</h3>
+<p>A graph is called complete graph if every two vertices pair are joined by exactly one edge. The complete graph with n vertices is denoted by $K_n$</p>
+<img src="images/complete_graph.jpg" alt="Complete Graph" />
+<h3>Cycle Graph</h3>
+<p>If a graph consists of a single cycle, it is called cycle graph. The cycle graph with n vertices is denoted by $C_n$</p>
+<img src="images/cyclic_graph.jpg" alt="Cycle Graph" />
+<h3>Bipartite Graph</h3>
+<p>If the vertex-set of a graph G can be split into two disjoint sets, $V_1$ and $V_2$, in such a way that each edge in the graph joins a vertex in $V_1$ to a vertex in $V_2$, and there are no edges in G that connect two vertices in $V_1$ or two vertices in $V_2$, then the graph $G$ is called a bipartite graph.</p>
+<img src="images/bipartite_graph.jpg" alt="Bipartite graph" />
+<h3>Complete Bipartite Graph</h3>
+<p>A complete bipartite graph is a bipartite graph in which each vertex in the first set is joined to every single vertex in the second set. The complete bipartite graph is denoted by $K_{x,y}$ where the graph $G$ contains $x$ vertices in the first set and $y$ vertices in the second set.</p>
+<img src="images/complete_bipartite.jpg" alt="Complete Bipartite Graph" />
+<h2>Representation of Graphs</h2>
+<p>There are mainly two ways to represent a graph &minus;</p>
+<ul class="list">
+<li>Adjacency Matrix</li>
+<li>Adjacency List</li>
+</ul>
+<h3>Adjacency Matrix</h3>
+<p>An Adjacency Matrix $A[V][V]$ is a 2D array of size $V \times V$ where $V$ is the number of vertices in a undirected graph. If there is an edge between $V_x$ to $V_y$ then the value of $A[V_x][V_y]=1$ and $A[V_y][V_x]=1$, otherwise the value will be zero. And for a directed graph, if there is an edge between $V_x$ to $V_y$, then the value of $A[V_x][V_y]=1$, otherwise the value will be zero.</p>
+<p><b>Adjacency Matrix of an Undirected Graph</b></p>
+<p>Let us consider the following undirected graph and construct the adjacency matrix &minus;</p>
+<img src="images/adjacency_undirected.jpg" alt="Adjacency undirected" />
+<p>Adjacency matrix of the above undirected graph will be &minus;</p>
+<table style="text-align:center; width:50%" align="center" class="table table-bordered">
+<tr>
+<td><p></p></td>
+<td><p><b>a</b></p></td>
+<td><p><b>b</b></p></td>
+<td><p><b>c</b></p></td>
+<td><p><b>d</b></p></td>
+</tr> 
+<tr>
+<td><p><b>a</b></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr>
+<td><p><b>b</b></p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr>
+<td><p><b>c</b></p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr>
+<td><p><b>d</b></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+</table> 
+<p><b>Adjacency Matrix of a Directed Graph</b></p>
+<p>Let us consider the following directed graph and construct its adjacency matrix &minus;</p>
+<img src="images/adjacency_directed.jpg" alt="Adjacency directed" />
+<p>Adjacency matrix of the above directed graph will be &minus;</p>
+<table style="text-align:center; width:50%" align="center" class="table table-bordered">
+<tr>
+<td><p></p></td>
+<td><p><b>a</b></p></td>
+<td><p><b>b</b></p></td>
+<td><p><b>c</b></p></td>
+<td><p><b>d</b></p></td>
+</tr> 
+<tr>
+<td><p><b>a</b></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr>
+<td><p><b>b</b></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr>
+<td><p><b>c</b></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr>
+<td><p><b>d</b></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+</table>
+<h3>Adjacency List</h3>
+<p>In adjacency list, an array $(A[V])$ of linked lists is used to represent the graph G with $V$ number of vertices. An entry $A[V_x]$ represents the linked list of vertices adjacent to the $Vx-th$ vertex. The adjacency list of the undirected graph is as shown in the figure below &minus;</p>
+<img src="images/adjacency_list.jpg" alt="Adjacency List" />
+<h2>Planar vs. Non-planar graph</h2>
+<p><b>Planar graph</b> &minus; A graph $G$ is called a planar graph if it can be drawn in a plane without any edges crossed. If we draw graph in the plane without edge crossing, it is called embedding the graph in the plane.</p>
+<img src="images/planar_graph.jpg" alt="Planar graph" />
+<p><b>Non-planar graph</b> &minus; A graph is non-planar if it cannot be drawn in a plane without graph edges crossing.</p>
+<img src="images/nonplanar_graph.jpg" alt="Non-planar graph" />
+<h2>Isomorphism</h2>
+<p>If two graphs G and H contain the same number of vertices connected in the same way, they are called isomorphic graphs (denoted by $G \cong H$).</p> 
+<p>It is easier to check non-isomorphism than isomorphism. If any of these following conditions occurs, then two graphs are non-isomorphic &minus;</p>
+<ul class="list">
+<li>The number of connected components are different</li>
+<li>Vertex-set cardinalities are different</li>
+<li>Edge-set cardinalities are different</li>
+<li>Degree sequences are different</li>
+</ul>
+<h3>Example</h3>
+<p>The following graphs are isomorphic &minus;</p>
+<img src="images/isomorphism.jpg" alt="Isomorphism" />
+<h2>Homomorphism</h2>
+<p>A homomorphism from a graph $G$ to a graph $H$ is a mapping (May not be a bijective mapping)$ h: G \rightarrow H$ such that &minus; $(x, y) \in E(G) \rightarrow (h(x), h(y)) \in E(H)$. It maps adjacent vertices of graph $G$ to the adjacent vertices of the graph $H$.</p>
+<h3>Properties of Homomorphisms</h3>
+<ul class="list">
+<li><p>A homomorphism is an isomorphism if it is a bijective mapping.</p></li>
+<li><p>Homomorphism always preserves edges and connectedness of a graph.</p></li>
+<li><p>The compositions of homomorphisms are also homomorphisms.</p></li>
+<li><p>To find out if there exists any homomorphic graph of another graph is a NPcomplete problem.</p></li>
+</ul>
+<h2>Euler Graphs</h2>
+<p>A connected graph $G$ is called an Euler graph, if there is a closed trail which includes every edge of the graph $G$. An Euler path is a path that uses every edge of a graph exactly once. An Euler path starts and ends at different vertices.</p>
+<p>An Euler circuit is a circuit that uses every edge of a graph exactly once. An Euler circuit always starts and ends at the same vertex. A connected graph $G$ is an Euler graph if and only if all vertices of $G$ are of even degree, and a connected graph $G$ is Eulerian if and only if its edge set can be decomposed into cycles.</p>
+<img src="images/euler_graph.jpg" alt="Euler graph" />
+<p>The above graph is an Euler graph as $“a\: 1\: b\: 2\: c\: 3\: d\: 4\: e\: 5\: c\: 6\: f\: 7\: g”$ covers all the edges of the graph.</p>
+<img src="images/non_euler_graph.jpg" alt="Non-Euler graph" />
+<h2>Hamiltonian Graphs</h2>
+<p>A connected graph $G$ is called Hamiltonian graph if there is a cycle which includes every vertex of $G$ and the cycle is called Hamiltonian cycle. Hamiltonian walk in graph $G$ is a walk that passes through each vertex exactly once.</p>
+<p>If $G$ is a simple graph with n vertices, where $n \geq 3$ If $deg(v) \geq \frac{n}{2}$  for each vertex $v$, then the graph $G$ is Hamiltonian graph. This is called <b>Dirac's Theorem</b>.</p>
+<p>If $G$ is a simple graph with $n$ vertices, where $n \geq 2$ if $deg(x) + deg(y) \geq n$ for each pair of non-adjacent vertices x and y, then the graph $G$ is Hamiltonian graph. This is called <b>Ore's theorem</b>.</p>
+<img src="images/hamiltonian_graph.jpg" alt="Hamiltonian graph" />
+<img src="images/non_hamiltonian_graph.jpg" alt="Non-Hamiltonian graph" />
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+<a href="discrete_mathematics_recurrence_relation.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+</div>
+<div class="nxt-btn">
+<a href="more_on_graphs.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="space-bottom" style="margin-bottom:20px;"></div>
+<div class="google-bottom-ads" id="google-bottom-ads">
+<div>Advertisements</div>
+<div>
+<div id="vi_bottom_ads"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_bottom_ads');
+     var mobile_ad_id = "vi_9017967";
+     var desktop_ad_id = "vi_9013190";
+     var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+<div class="space-bottom"></div>
+</div>
+</div>
+<!-- Tutorial Content Ends Here -->
+<!-- Right Column Starts Here -->
+<div class="mui-col-md-2 google-right-ads" id="chapter-menu" style="display: none;">
+<input type="hidden" id="vu" name="vu" value=""/>
+<div class="space-top"></div>
+<div class="mui-panel">
+<ul class="paid-menu" id="div-right-menu">
+<li><a class="hide-on-mobile" href="javascript:printPage();" title="Print this page"><i class="fa fa-print"></i> Print</a></li>
+<li><a href="javascript:void(0)" class="add_notes" title="Add Custom Notes" onclick="add_notes();"><i class="fa fa-edit"></i>&nbsp;Add Notes</a></li>
+<li><a href="javascript:void(0)" class="clsPage text-bookmark" id="text-bookmark" title="Add Bookmark" onclick="text_bookmark()"><i class="fal fa-bookmark"></i>&nbsp;Bookmark this page </a></li>
+<li><a href="javascript:void(0);" id="report_error_popup" onclick="report_error_popup();" title="Report Error"><i class="fal fa-bell"></i>&nbsp;Report Error</a></li>
+<li><a href="javascript:void(0);" id="suggestion_popup" title="Give Suggestions" onclick="suggestion_popup();"><i class="fal fa-badge-check"></i>&nbsp;Suggestions</a></li>
+</ul>
+<div class="profile-my-notes" id="text_notes_div" style="display:none;">
+<textarea rows="10" class="text_notes" id="text_notes" name="text_notes" placeholder="Enter your custom notes..."></textarea>
+<br>
+<a href="javascript:void(0);" id="submit_text_notes" class="butn-save" onclick="submit_text_notes();"> Save</a>
+<a href="javascript:void(0);" class="pop-no butn-cancel" onclick="notesClose();"> Close</a>
+<p class="notes_msg"  ></p>
+</div>
+<div class="bottom-menu">
+<button class="tp-btn"><i class="fal fa-box-up"></i> <a href="https://www.tutorialspoint.com/videotutorials/dashboard.php">Dashboard</a></button>
+<button class="tp-btn"><i class="fal fa-sign-out-alt"></i> <a href="https://www.tutorialspoint.com/videotutorials/userlogout.php">Logout</a></button>
+</div>
+</div>
+</div>
+<div class="mui-col-md-2 google-right-ads" id="google-right-ads">
+<div class="space-top"></div>
+<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+<div class="adsbyvli" data-ad-slot="vi_9017966"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017966")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;">
+<div class="adsbyvli" data-ad-slot="vi_9017967"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017967")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+<div class="adsbyvli" data-ad-slot="vi_9013289"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9013289")})</script>
+</div>
+<div class="space-bottom" style="margin-bottom:15px;"></div>
+</div>
+<!-- Right Column Ends Here -->
+</div>
+</div>
+<div class="clear"></div>
+<footer id="footer">
+<div class="mui--text-center">
+<div class="mui--text-caption mui--text-light">
+<a href="https://www.tutorialspoint.com/index.htm" class="logo"><img class="img-responsive" src="../images/logo-black.png" alt="Tutorials Point" title="Tutorials Point"></a>
+</div>
+<ul class="mui-list--inline mui--text-body2 mui--text-light">
+<li><a href="https://www.tutorialspoint.com/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+<li><a href="https://www.tutorialspoint.com/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/teach-with-us.php"><i class="fa fa-user header-icons"></i> Teach with Us</a></li>
+<li><a href="https://www.tutorialspoint.com/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+</ul>
+<div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights Reserved.</div>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-232293-6');
+</script>
+<script src="../videotutorials/js/text_menu.js%3Fv=1"></script>
+<script>
+function readCookie(name) {
+     var nameEQ = name + "=";
+     var ca = document.cookie.split(';');
+     for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+     }
+     return null;
+}
+$(document).ready(function (){
+    var cval = readCookie('subscription_purchased');
+    if(cval == '1'){
+          // logged in and purchased subscription.
+          $('#google-right-ads').remove();
+          $('#vi1').remove();
+          $('#vi2').remove();
+          $('#adp').remove();
+          $('#stickyparent').remove();
+          $('#google-top-ads').remove();
+          $('#google-bottom-ads').remove();
+          $('.tutorial-content hr').remove();
+          $('.login').remove();
+          $('#chapter-menu').show();
+          $('.content h1').css("border-bottom", "none");
+          $('.google-right-ads').css("padding-right", "0px");
+          $('.tutorial-content').css("border-radius", "10px");
+          $('#chapter-menu .mui-panel').css("border-radius", "10px");
+     }
+});
+</script>
+</footer>
+</body>
+</html>
