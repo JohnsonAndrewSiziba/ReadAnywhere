@@ -1,6 +1,8 @@
 package com.johnson.ender.siziba.automatatheory.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.johnson.ender.siziba.automatatheory.R;
+import com.johnson.ender.siziba.automatatheory.Read;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +56,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NewsViewHolder newsViewHolder, int position) {
+    public void onBindViewHolder(@NonNull NewsViewHolder newsViewHolder, final int position) {
 
         // bind data here
 
@@ -74,6 +77,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         newsViewHolder.tv_content.setText(mDataFiltered.get(position).getContent());
         newsViewHolder.tv_date.setText(mDataFiltered.get(position).getDate());
         newsViewHolder.img_user.setImageResource(mDataFiltered.get(position).getUserPhoto());
+
+        newsViewHolder.container.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, Read.class);
+                mContext.startActivity(intent);
+            }
+        });
 
 
 
