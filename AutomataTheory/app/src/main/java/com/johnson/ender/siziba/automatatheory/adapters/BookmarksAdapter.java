@@ -3,7 +3,6 @@ package com.johnson.ender.siziba.automatatheory.adapters;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,14 +16,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.johnson.ender.siziba.automatatheory.R;
 import com.johnson.ender.siziba.automatatheory.Read;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> implements Filterable {
+public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.NewsViewHolder> implements Filterable {
 
 
     Context mContext;
@@ -33,14 +30,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     boolean isDark = false;
 
 
-    public NewsAdapter(Context mContext, List<NewsItem> mData, boolean isDark) {
+    public BookmarksAdapter(Context mContext, List<NewsItem> mData, boolean isDark) {
         this.mContext = mContext;
         this.mData = mData;
         this.isDark = isDark;
         this.mDataFiltered = mData;
     }
 
-    public NewsAdapter(Context mContext, List<NewsItem> mData) {
+    public BookmarksAdapter(Context mContext, List<NewsItem> mData) {
         this.mContext = mContext;
         this.mData = mData;
         this.mDataFiltered = mData;

@@ -29,11 +29,7 @@ import java.util.List;
 
 public class FragmentReadAndRecent extends Fragment {
 
-    RecyclerView NewsRecyclerview;
-    NewsAdapter newsAdapter;
-    List<NewsItem> mData;
-    ConstraintLayout rootLayout;
-    boolean isDark = false;
+    private List<NewsItem> mData;
 
 
     public FragmentReadAndRecent() {
@@ -60,21 +56,25 @@ public class FragmentReadAndRecent extends Fragment {
 
         Button scanButton = (getActivity()).findViewById(R.id.button2);
 
-        rootLayout = getActivity().findViewById(R.id.frameLayout);
-        NewsRecyclerview = getActivity().findViewById(R.id.news_rv);
+        ConstraintLayout rootLayout = getActivity().findViewById(R.id.frame_layout);
+        RecyclerView newsRecyclerview = getActivity().findViewById(R.id.my_rv);
         mData = new ArrayList<>();
 
         addData();
 
-        newsAdapter = new NewsAdapter(getActivity(),mData,isDark);
-        NewsRecyclerview.setAdapter(newsAdapter);
-        NewsRecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
+        boolean isDark = false;
+        NewsAdapter newsAdapter = new NewsAdapter(getActivity(), mData, isDark);
+        newsRecyclerview.setAdapter(newsAdapter);
+        newsRecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         scanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), Read.class));
-//                getActivity().finish();
+//                startActivity(new Intent(getActivity(), Read.class));
+                Intent intent = new Intent(getActivity(), Read.class);
+                intent.putExtra("THE_LINK", "file:///android_asset/automata_theory/index.htm");
+                startActivity(intent);
+                getActivity().finish();
             }
         });
 
@@ -91,12 +91,13 @@ public class FragmentReadAndRecent extends Fragment {
             do{
                 int id = cursor.getInt(cursor.getColumnIndex("_id"));
                 String title = cursor.getString(cursor.getColumnIndex("title"));
+                String intro = cursor.getString(cursor.getColumnIndex("intro"));
                 String path = cursor.getString(cursor.getColumnIndex("path"));
                 String type = cursor.getString(cursor.getColumnIndex("type"));
                 long time = cursor.getLong(cursor.getColumnIndex("time_created"));
                 String theTime = TimeUtility.timeAgo(time);
 
-                NewsItem newsItem = new NewsItem(title.substring(0, Math.min(title.length(), 12)), title, theTime, R.drawable.ic_info_black);
+                NewsItem newsItem = new NewsItem(title, intro, theTime, R.drawable.ic_info_black, path);
 
                 mData.add(newsItem);
 

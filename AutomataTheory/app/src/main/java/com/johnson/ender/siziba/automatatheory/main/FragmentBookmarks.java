@@ -1,59 +1,42 @@
 package com.johnson.ender.siziba.automatatheory.main;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.johnson.ender.siziba.automatatheory.R;
+import com.johnson.ender.siziba.automatatheory.adapters.BookmarksAdapter;
+import com.johnson.ender.siziba.automatatheory.adapters.NewsAdapter;
+import com.johnson.ender.siziba.automatatheory.adapters.NewsItem;
+import com.johnson.ender.siziba.automatatheory.database.DBManager;
+import com.johnson.ender.siziba.automatatheory.helpers.TimeUtility;
 
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FragmentBookmarks#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class FragmentBookmarks extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private List<NewsItem> mData;
 
     public FragmentBookmarks() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentBookmarks.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FragmentBookmarks newInstance(String param1, String param2) {
-        FragmentBookmarks fragment = new FragmentBookmarks();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
@@ -62,4 +45,48 @@ public class FragmentBookmarks extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_bookmarks, container, false);
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        ConstraintLayout rootLayout = getActivity().findViewById(R.id.bookmarks_frame);
+        RecyclerView bookmarksRv = getActivity().findViewById(R.id.bookmarks_rv);
+        mData = new ArrayList<>();
+
+        addData();
+
+        boolean isDark = false;
+        NewsAdapter bookmarksAdapter = new NewsAdapter(getActivity(), mData, isDark);
+        bookmarksRv.setAdapter(bookmarksAdapter);
+        bookmarksRv.setLayoutManager(new LinearLayoutManager(getActivity()));
+    }
+
+    public void addData(){
+        DBManager dbManager = new DBManager(getActivity());
+        dbManager.open();
+        Cursor cursor =  dbManager.fetch("bookmark");
+        dbManager.close();
+
+        if (cursor.moveToFirst()){
+            do{
+                int id = cursor.getInt(cursor.getColumnIndex("_id"));
+                String title = cursor.getString(cursor.getColumnIndex("title"));
+                String intro = cursor.getString(cursor.getColumnIndex("intro"));
+                String path = cursor.getString(cursor.getColumnIndex("path"));
+                String type = cursor.getString(cursor.getColumnIndex("type"));
+                long time = cursor.getLong(cursor.getColumnIndex("time_created"));
+                String theTime = TimeUtility.timeAgo(time);
+
+                NewsItem newsItem = new NewsItem(title, intro, theTime, R.drawable.ic_info_black, path);
+
+                mData.add(newsItem);
+
+            }   while(cursor.moveToNext());
+        }
+        cursor.close();
+
+    }
+
+
 }

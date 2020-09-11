@@ -30,14 +30,15 @@ public class DBManager {
         dbHelper.close();
     }
 
-    public void insert(String title, String path, String type) {
+    public void insert(String title, String path, String intro, String type) {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         long millis = timestamp.getTime();
 
         ContentValues contentValue = new ContentValues();
-        contentValue.put(DatabaseHelper.TITLE, title);
+        contentValue.put(DatabaseHelper.TITLE, title.substring(0, Math.min(title.length(), 30)));
         contentValue.put(DatabaseHelper.PATH, path);
         contentValue.put(DatabaseHelper.TYPE, type);
+        contentValue.put(DatabaseHelper.INTRO, intro.substring(0, Math.min(intro.length(), 100)));
         contentValue.put(DatabaseHelper.TIME_CREATED, millis);
         database.insert(DatabaseHelper.TABLE_LINKS_NAME, null, contentValue);
     }
@@ -46,7 +47,7 @@ public class DBManager {
         String[] columns = new String[] { DatabaseHelper.ID, DatabaseHelper.TITLE, DatabaseHelper.PATH, DatabaseHelper.TIME_CREATED };
 //        Cursor cursor = database.query(DatabaseHelper.TABLE_LINKS_NAME, columns, null, DatabaseHelper.TYPE + " = " + type, null, null, null);
 
-        String query = "SELECT * FROM " + DatabaseHelper.TABLE_LINKS_NAME + " WHERE " + DatabaseHelper.TYPE + " = ? ORDER BY " + DatabaseHelper.ID +" DESC";
+        String query = "SELECT * FROM " + DatabaseHelper.TABLE_LINKS_NAME + " WHERE " + DatabaseHelper.TYPE + " = ? ORDER BY " + DatabaseHelper.TIME_CREATED +" DESC LIMIT 100";
         Cursor cursor = database.rawQuery(query, new String[] {type});
         if (cursor != null) {
             cursor.moveToFirst();

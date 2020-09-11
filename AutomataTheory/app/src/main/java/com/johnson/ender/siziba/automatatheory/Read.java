@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
@@ -26,20 +27,26 @@ import java.io.InputStream;
 public class Read extends AppCompatActivity {
     String pageLink = "";
     String pageTitle = "";
+    String pageIntro = "";
     boolean pageIsBookmarked = false;
 
     private DBManager dbManager;
 
     private Menu mainMenu;
 
+    String initLink;
+
+    WebView htmlWebView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setupToolbar();
+        initLink = getIntent().getStringExtra("THE_LINK");
         setContentView(R.layout.activity_read);
 
-        final WebView htmlWebView = findViewById(R.id.theWebview);
+        htmlWebView = findViewById(R.id.theWebview);
         WebSettings webSetting = htmlWebView.getSettings();
         webSetting.setJavaScriptEnabled(true);
         webSetting.setAllowUniversalAccessFromFileURLs(true);
@@ -69,12 +76,12 @@ public class Read extends AppCompatActivity {
                 super.onPageFinished(view, url);
 
                 // Inject CSS when page is done loading
-                injectCSS(view);
+                //injectCSS(view);
 
-                injectScriptFile(view, "js/javascript.js"); // see below ...
+                //injectScriptFile(view, "js/javascript.js"); // see below ...
 
                 // test if the script was loaded
-                view.loadUrl("javascript:setTimeout(test(), 500)");
+                //view.loadUrl("javascript:setTimeout(test(), 500)");
 
                 Log.i("Read", "Finished loading URL: " + url);
                 if (progressBar.isShowing()) {
@@ -141,7 +148,8 @@ public class Read extends AppCompatActivity {
         });
 
 
-        htmlWebView.loadUrl("file:///android_asset/automata_theory/index.htm");//automata_theory/index.htm
+        htmlWebView.loadUrl(initLink);//automata_theory/index.htm
+        //htmlWebView.loadUrl("file:///android_asset/automata_theory/index.htm");//automata_theory/index.htm
 
     }
 
@@ -159,7 +167,7 @@ public class Read extends AppCompatActivity {
         switch (item.getItemId()) {
             // Respond to the action bar's Up/Home button
             case android.R.id.home:
-//                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 finish();
                 return true;
             case  R.id.Menu_Bookmark:
@@ -172,7 +180,7 @@ public class Read extends AppCompatActivity {
                 break;
 
             case R.id.Menu_Contents:
-                //Do Logout
+                htmlWebView.loadUrl("javascript:contents()");
                 break;
 
         }
@@ -192,24 +200,30 @@ public class Read extends AppCompatActivity {
     }
 
     @JavascriptInterface
-    public void getPageDetails(String title, String link){
+    public void getPageDetails(String title, String link, String intro){
         Log.i("Read", "Title: " + title);
         Log.i("Read", "Link: " + link);
         //return new String[]{title, link};
         this.pageLink = link;
         this.pageTitle = title;
+        this.pageIntro = intro;
 
         pageOpenTasks();
     }
 
     public void setTitle(){
-        getSupportActionBar().setTitle(pageTitle);
+        try {
+            getSupportActionBar().setTitle(pageTitle);
+        }
+        catch (Exception ignored){
+            ;
+        }
     }
 
     public void savePageDetails(){
         dbManager = new DBManager(this);
         dbManager.open();
-        dbManager.insert(pageTitle, pageLink, "history");
+        dbManager.insert(pageTitle, pageLink, pageIntro, "history");
         dbManager.close();
     }
 
@@ -251,7 +265,7 @@ public class Read extends AppCompatActivity {
     public void addBookmark(){
         dbManager = new DBManager(this);
         dbManager.open();
-        dbManager.insert(pageTitle, pageLink, "bookmark");
+        dbManager.insert(pageTitle, pageLink, pageIntro, "bookmark");
         dbManager.close();
         setPageBookmarkedIcon();
     }
@@ -264,4 +278,14 @@ public class Read extends AppCompatActivity {
         setPageBookmarkedIcon();
     }
 
+
+    @Override
+    public void onBackPressed() {
+        if (htmlWebView.canGoBack()) {
+            htmlWebView.goBack();
+        } else {
+            startActivity(new Intent(this, MainActivity.class));
+            finish();
+        }
+    }
 }

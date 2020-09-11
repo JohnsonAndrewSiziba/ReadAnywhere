@@ -49,9 +49,9 @@ public class IntroActivity extends AppCompatActivity {
         String lorem = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter";
 
         final List<ScreenItem> mlist = new ArrayList<>();
-        mlist.add(new ScreenItem("Messaging", "Chat with other Agribank personnel and manage your emails from your phone.", R.drawable.communication));
-        mlist.add(new ScreenItem("Convenient", "Internal Requisitions, Leave Management, and many more in one place for your convenience", R.drawable.convenience));
-        mlist.add(new ScreenItem("eChannels Team", "Brought to you by Agribank eChannels team", R.drawable.echannels));
+        mlist.add(new ScreenItem("Read Anywhere", "Take your notes with you everywhere.", R.drawable.everywhere));
+        mlist.add(new ScreenItem("Succeed!", "Never miss an opportunity to study.", R.drawable.ic_book_lover));
+        mlist.add(new ScreenItem("Johnson", "Brought to you by Johnson A. Siziba", R.drawable.johnson));
 
         screenPager = findViewById(R.id.screenViewPager);
         introViewPagerAdapter = new IntroViewPagerAdapter(this, mlist);

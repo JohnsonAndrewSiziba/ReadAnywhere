@@ -13,11 +13,13 @@ function initialize(){
 }
 
 function getPageDetails(){
-    let title = document.getElementsByTagName("title")[0].innerHTML
+    //let title = document.getElementsByTagName("title")[0].innerHTML
+    let title = $(".tutorial-content h1").text()
+    let intro = $(".tutorial-content p:first").text()
     let url=location.href;
     let urlFilename = url.substring(url.lastIndexOf('/')+1);
-    console.log(`Title: ${title}, File: ${urlFilename}`);
-    JSReceiver.getPageDetails(title, url);
+    console.log(`Title: ${title}, Intro: ${intro}, File: ${urlFilename}`);
+    JSReceiver.getPageDetails(title, url, intro);
 }
 
 function addBookmark(){
@@ -28,7 +30,15 @@ function toggleContents(){
 
 }
 
+function contents(){
+    $('#myModal').modal('toggle');
+}
+
 
 ////================================FUNCTION CALLS==========================///////////
 
-initialize();
+
+
+$(document).ready(function() {
+      initialize();
+});

@@ -3,17 +3,18 @@ package com.johnson.ender.siziba.automatatheory.adapters;
 public class NewsItem {
 
 
-    String Title,Content,Date;
+    String Title,Content,Date, Link;
     int userPhoto;
 
     public NewsItem() {
     }
 
 
-    public NewsItem(String title, String content, String date, int userPhoto) {
+    public NewsItem(String title, String content, String date, int userPhoto, String link) {
         Title = title;
         Content = content;
         Date = date;
+        Link = link;
         this.userPhoto = userPhoto;
     }
 
@@ -47,5 +48,13 @@ public class NewsItem {
 
     public int getUserPhoto() {
         return userPhoto;
+    }
+
+    public String getLink() {
+        return Link;
+    }
+
+    public void setLink(String link) {
+        Link = link;
     }
 }

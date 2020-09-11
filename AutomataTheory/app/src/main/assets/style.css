@@ -1,3 +1,7 @@
 .cover, .tutorial-menu, .google-bottom-ads, #google-top-ads, #header, #footer {
     display: none;
 }
+
+li.heading {
+    background: #004d99;
+}
